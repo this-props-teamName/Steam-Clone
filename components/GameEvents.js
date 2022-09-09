@@ -34,11 +34,11 @@ const GameEvents = () => {
               href="https://store.steampowered.com/news/app/990080/view/3333248206672092333"
               onMouseEnter={() => setOnHoverLeft(true)} onMouseLeave={() => setOnHoverLeft(false)}>
                 {onHoverLeft ? (
-              <div className=" absolute top-0 pointer-events-none w-full h-full z-[1] p-0 m-0  block " style={{backgroundColor: "rgba(0,0,0,0.8)"}}>
-                <div className=' mt-5 mr-5 mb-0 ml-5 text-[12px] uppercase font-[500] overflow-hidden select-none scale-100 z-[2] p-0 block text-[#289cff]' >
+              <div className=" absolute top-0 pointer-events-none w-full h-full z-[1] p-0 m-0  block " style={{backgroundColor: "rgba(26, 25, 25, 0.627)" }}  >
+                <div className=' mt-5 mr-5 mb-0 ml-5 text-[12px] uppercase font-[500] overflow-hidden select-none scale-100 z-[2] p-0 block text-[#289cff]'  >
                   News
                 </div>
-                <div className='mx-[20px] mt-[20px] mb-0 text-[15px] leading-5 font-light overflow-hidden select-none scale-100 z-[2] p-0 '>
+                <div className=' mx-[20px] mt-[20px] mb-0 text-[15px] leading-5 font-[400] tracking-normal overflow-hidden select-none scale-100 z-[2] p-0 font-serif text-[#fff]'>
                   Take a tour of the Slytherin common room, located deep within
                   the dungeons of Hogwarts Castle.
                 </div>
@@ -49,13 +49,13 @@ const GameEvents = () => {
               {/* </div> */}
               {/* this happens whe No onhover */}
               <div
-                className=" flex flex-col h-full "
+                className={Backing.leftDiv}
                 // onMouseEnter={() => setOnHoverLeft(true)}
                 // onMouseLeave={() => setOnHoverLeft(false)}
               >
                 <div className=" w-full h-auto relative overflow-hidden">
                   <img
-                    className=" hover:bg-[#00000080] w-full h-auto relative left-0 top-0 block  "
+                    className=" w-full h-auto relative left-0 top-0 block  "
                     src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/42155078/6e9647679e2a01001e1a61da7b7373bc086350f6_400x225.jpg"
                   />
                 </div>
@@ -75,9 +75,9 @@ const GameEvents = () => {
               href="https://store.steampowered.com/news/app/990080/view/3333248206672082972" onMouseEnter={() => setOnHoverRight(true)} onMouseLeave={() => setOnHoverRight(false)}>
               {/* This portion is the on hover area  */}
               { onHoverRight ? (
-              <div className='absolute top-0 pointer-events-none w-full h-full z-[1] p-0 m-0 block' style={{backgroundColor: "rgba(0,0,0,0.8)"}}>
+              <div id='hoverDiv' className='absolute top-0 pointer-events-none w-full h-full z-[1] p-0 m-0 block' style={{backgroundColor: "rgba(26, 25, 25, 0.627)"}}>
                 <div className='mt-5 mr-5 mb-0 ml-5 text-[12px] uppercase font-[500] overflow-hidden select-none scale-100 z-[2] p-0 block text-[#289cff]'>News</div>
-                <div className='mx-[20px] mt-[20px] mb-0 text-[15px] leading-5 font-light overflow-hidden select-none scale-100 z-[2] p-0 '>
+                <div className='mx-[20px] mt-[20px] mb-0 text-[15px] leading-5 font-[400] overflow-hidden select-none scale-100 z-[2] p-0 text-[#fff]'>
                   Welcome to Hufflepuff Common Room, where cozy natural
                   sunlight and an array of plants await.
                 </div>
@@ -86,7 +86,7 @@ const GameEvents = () => {
               }
               <div className="w-full h-full bg-cover absolute opactiy-[.4]"></div>
               {/* this is Before Hover  */}
-              <div className="flex flex-col h-full">
+              <div className={Backing.leftDiv}>
                 <div className="w-full h-auto relative overflow-hidden">
                   <img
                     className={Backing.rightImg}
