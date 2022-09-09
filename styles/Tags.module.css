@@ -75,17 +75,16 @@
     position: relative;
 }
 
-.app_tagging_modal {
-    display: block;
+.app_tag_modal {
     width: 546px;
 }
 
-.app_tagging_modal_content {
+.app_content {
     position: relative;
     margin-bottom: 64px;
 }
 
-.app_tagging_modal_seperator {
+.seperator {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -94,7 +93,7 @@
     background-color: #3c3d3e;
 }
 
-.app_tag_modal_left {
+.app_tag_left {
     padding-right: 16px;
     float: left;
     width: 256px;
@@ -156,3 +155,33 @@
     text-overflow: ellipsis;
 }
 
+.app_tag_right {
+    float: right;
+    width: 256px;
+    padding-left: 16px;
+}
+
+.paragraph {
+    line-height: 17px;
+    margin-bottom: 8px;
+}
+
+.blue_btn {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #67c1f5 !important;
+    background: rgba( 103, 193, 245, 0.2 );
+}
+
+.blue_btn_span {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 2px;
+    display: block;
+    background: transparent;
+}
