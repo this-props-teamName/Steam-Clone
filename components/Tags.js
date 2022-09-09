@@ -218,6 +218,13 @@ const Tags = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className= {tagStyles.newModal_btn}>
+                            <div className= {tagStyles.btn_grey_steamui}>
+                                <span className= {tagStyles.btn_medium_span}>
+                                    Close
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

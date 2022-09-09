@@ -185,3 +185,31 @@
     display: block;
     background: transparent;
 }
+
+.newModal_btn {
+    text-align: right;
+}
+
+.btn_grey_steamui {
+    margin-left: 12px;
+    margin-top: 12px;
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #dfe3e6;
+    background: transparent;
+}
+
+.btn_medium_span {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 2px;
+    display: block;
+    background: linear-gradient( to right, #32363f 5%, #32363f 95%);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+    transition: all 0.2s ease-out;
+}
