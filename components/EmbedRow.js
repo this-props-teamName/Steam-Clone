@@ -8,11 +8,6 @@ const EmbedRow = () => {
     const [showBase, setBaseBox] = useState(false)
     const [showDeluxe, setDeluxeBox] = useState(false)
     const [showReport, setReportBox] = useState(false);
-    const [selectedRadioBtn, setSelectedRadioBtn] = useState('radio1');
-
-    const isRadioSelected = (value) => selectedRadioBtn === value;
-    const handleRadioClick = (event) => setSelectedRadioBtn(event.target.value);
-
 
     return (
         <div className = {shareStyles.box}>
@@ -173,14 +168,53 @@ const EmbedRow = () => {
                                                 width="646"
                                                 height="190" 
                                                 ></iframe>
-                                                    </div>
                                                 </div>
-                                            </div>
+                                                <p className = {shareStyles.small}> {"Copy and paste the HTML below into your website to make the above widget appear"}</p>
+                                                <textarea className = {shareStyles.widget_text} placeholder= {"<iframe src=" + "\"https://store.steampowered.com/widget/990080/326241/\"" + " frameborder=" + " \"0\"" + " width=" + " \"646\"" + " height=" + " \"190\"" +"></iframe>"}></textarea>
+                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    ): null}
+                        </div>
+                ): null}
+
+
+{showDeluxe ? (
+                        <div className = {shareStyles.createModal}>
+                            <div className = {shareStyles.top_bar}></div>
+                                <div>
+                                    <div className ={shareStyles.header}>
+                                        <div 
+                                            onClick={() => setBaseBox(false)}
+                                            className = {shareStyles.close}>
+                                        </div>
+                                    <div className = {shareStyles.title}>Create Widget to Embed</div>
+                                </div>
+                            </div>
+                            <div className = {shareStyles.content_border}>
+                                <div className = {shareStyles.content}>
+                                    <div>
+                                        <div className = {shareStyles.embed_modal}>
+                                            <div className = {shareStyles.widget_create}>
+                                                <div className = {shareStyles.widget_container}>
+                                                    <iframe 
+                                                    src="https://store.steampowered.com/widget/990080/757087/"
+                                                frameborder="0"
+                                                width="646"
+                                                height="190" 
+                                                ></iframe>
+                                                </div>
+                                                <p className = {shareStyles.small}> {"Copy and paste the HTML below into your website to make the above widget appear"}</p>
+                                                <textarea className = {shareStyles.widget_text} placeholder= {"<iframe src=" + "\"https://store.steampowered.com/widget/990080/757087/\"" + " frameborder=" + " \"0\"" + " width=" + " \"646\"" + " height=" + " \"190\"" +"></iframe>"}></textarea>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                ): null}
+
 
             
 {/* Report This Prodcut */}

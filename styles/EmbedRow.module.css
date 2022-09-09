@@ -329,6 +329,26 @@
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
 
+.widget_container {
+    margin-bottom: 15px;
+}
+
+.small {
+    margin: 0 0 3px 0;
+    font-size: 14px;
+}
+
+.widget_text {
+    width: 100%;
+    height: 80px;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0 0 15px 0;
+    background-color: transparent;
+    border: none;
+    color: #8f98a0;
+}
+
 
 /* Report Modal===============================================================================  */
 .reportModal {
