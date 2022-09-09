@@ -1,0 +1,52 @@
+.rightColumn {
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.gameRelevance {
+    color: #acb2b8;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 16px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.5) 100%);
+}
+
+.gameFeatures {
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.5) 100%);
+    padding: 16px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+.supportedLanguages {
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.5) 100%);
+    padding: 16px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+.ratings {
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.5) 100%);
+    padding: 16px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    display: block;
+}
+
+.details {
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.5) 100%);
+    padding: 16px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+    color: #8f98a0;
+    line-height: 20px;
+    display: block;
+}
