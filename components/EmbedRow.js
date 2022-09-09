@@ -149,11 +149,38 @@ const EmbedRow = () => {
             ) : null}
 
 {/* Modal for the Create Widget*/}
-            {showBase ? (
-                <div className = {shareStyles.createModal}>
-                    <div className = {shareStyles.top_bar}></div>
-                </div>
-            ): null}
+        {showBase ? (
+                        <div className = {shareStyles.createModal}>
+                            <div className = {shareStyles.top_bar}></div>
+                                <div>
+                                    <div className ={shareStyles.header}>
+                                        <div 
+                                            onClick={() => setBaseBox(false)}
+                                            className = {shareStyles.close}>
+                                        </div>
+                                    <div className = {shareStyles.title}>Create Widget to Embed</div>
+                                </div>
+                            </div>
+                            <div className = {shareStyles.content_border}>
+                                <div className = {shareStyles.content}>
+                                    <div>
+                                        <div className = {shareStyles.embed_modal}>
+                                            <div className = {shareStyles.widget_create}>
+                                                <div className = {shareStyles.widget_container}>
+                                                    <iframe 
+                                                    src="https://store.steampowered.com/widget/990080/"
+                                                frameborder="0"
+                                                width="646"
+                                                height="190" 
+                                                ></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    ): null}
 
             
 {/* Report This Prodcut */}
