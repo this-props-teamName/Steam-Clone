@@ -1,0 +1,21 @@
+.carousel_area{
+    width: 940px;
+    height: 444px;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.4));
+}
+
+.arrow{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: -15px;
+    left: 45px;
+    border: 12px solid white;
+    border-top: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
