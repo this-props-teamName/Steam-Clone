@@ -1,0 +1,26 @@
+.modal_background {
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    background: linear-gradient( 135deg, #356480 5%,#1a303d 95%);
+    color: white;
+    display: none;
+}
+
+.modal_btns{
+    display: none;
+    position: absolute; 
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #67c1f5;
+    background: rgba( 103, 193, 245, 0.2 );
+    line-height: 28px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+}
