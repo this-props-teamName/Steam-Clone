@@ -2,7 +2,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import MainBody from './MainBody'
 import ModalStyles from '../styles/Modal.module.css'
-import { gamesState, carouselState, systemMinState, systemReqState, commentsState } from "./state"
+import { gamesState, carouselState, systemMinState, systemReqState, newsState } from "./state"
 import { useRecoilState } from "recoil"
 import React, {useEffect} from 'react'; 
 import axios from 'axios'
@@ -13,7 +13,7 @@ const Layout = ({children}) => {
 const [gamesInfo, setGamesInfo] = useRecoilState(gamesState)
 const [carouselInfo, setCarouselInfo] = useRecoilState(carouselState)
 const [systemMinInfo, setSystemMinInfo] = useRecoilState(systemMinState)
-const [commentsInfo, setCommentsInfo] = useRecoilState(commentsState)
+const [newsInfo, setNewsInfo] = useRecoilState(newsState)
 const [systemReqInfo, setSystemReqInfo] = useRecoilState(systemReqState)
 
 
@@ -30,8 +30,8 @@ useEffect(() => {
   axios.get('/api/req')
     .then(res => setSystemReqInfo(res.data[0]));
 
-  axios.get('/api/comments')
-    .then(res => setCommentsInfo(res.data[0]));
+  axios.get('/api/news')
+    .then(res => setNewsInfo(res.data[0]));
 }, [])
 
 
