@@ -5,8 +5,8 @@ import React, { useState } from "react"
 const EmbedRow = () => {
     const [shareBox, setShareBox] = useState(false);
     const [showEmbed, setEmbedBox] = useState(false);
-    const [showBase, setBaseBox] = useState(false)
-    const [showDeluxe, setDeluxeBox] = useState(false)
+    const [showBase, setBaseBox] = useState(false);
+    const [showDeluxe, setDeluxeBox] = useState(false);
     const [showReport, setReportBox] = useState(false);
 
     return (
@@ -186,7 +186,7 @@ const EmbedRow = () => {
                                 <div>
                                     <div className ={shareStyles.header}>
                                         <div 
-                                            onClick={() => setBaseBox(false)}
+                                            onClick={() => setDeluxeBox(false)}
                                             className = {shareStyles.close}>
                                         </div>
                                     <div className = {shareStyles.title}>Create Widget to Embed</div>
@@ -219,7 +219,7 @@ const EmbedRow = () => {
             
 {/* Report This Prodcut */}
             {showReport ? (
-                <div className= {` ${shareStyles.reportModal} ${shareStyles.scrollbar}`}>
+                <div className= {shareStyles.reportModal}>
                      <div className = {shareStyles.top_bar}></div>
                         <div>
                             <div className ={shareStyles.header}>
@@ -364,10 +364,16 @@ const EmbedRow = () => {
                                                     </div>
                                             </div>
                                             <div className= {shareStyles.btn_container}>
-                                                <div className= {shareStyles.green_btn}>
+                                                <div 
+                                                className= {shareStyles.green_btn}
+                                                onClick={() => setReportBox(false)} 
+                                                >
                                                     <span className= {shareStyles.green_btn_medium}>Report</span>
                                                 </div>
-                                                <div className= {shareStyles.gray_btn}>
+                                                <div 
+                                                className= {shareStyles.gray_btn}
+                                                onClick={() => setReportBox(false)}
+                                                >
                                                     <span className= {shareStyles.gray_btn_medium}>
                                                         Cancel
                                                     </span>
