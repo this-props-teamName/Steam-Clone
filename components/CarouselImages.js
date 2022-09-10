@@ -11,18 +11,9 @@ const CarouselImages = () => {
   const [counter, setCounter] = useState(0)
   const [timer, setTimer] = useState(0)
   const [val, setVal] =useState(0)
-  const [topScrollBar, setTopScrollBar] = useState(0)
-  const [winWid, setWinWid] = useState(0)
-  const [beginningBar, setBeginningBar] = useState(0)
 
   useEffect(()=>{
     interval(frame, counter)
-  },[])
-  
-  useEffect(()=> {
-    setInterval(()=>{
-      setWinWid(window.innerWidth)
-  },500)
   },[])
 
   function interval(x, y){
@@ -43,7 +34,7 @@ const CarouselImages = () => {
     setCounter(y)
     interval(x,y)
   }
-// console.log(winWid, "global")
+
   let scrollTop = () => {
     return `w-[602px] left-[${val}px] absolute`
   }
@@ -53,11 +44,32 @@ const CarouselImages = () => {
     setVal((event.target.value - 50) * (0.04))
   }
 
-  function incrementLoc(event){
-    console.log(event, "left button")
+  function incrementLoc(x, y){
+    if(x<480){
+      clearInterval(timer)
+      setFrame(x += 120);
+      setCounter(y += 1);
+      interval(x, y);
+    }else{
+      clearInterval(timer)
+      setFrame(x -=480);
+      setCounter(y -= 4);
+      interval(0, 0);
+    }
   }
-  function decrementLoc(event){
-    console.log(event, "right button")
+
+  function decrementLoc(x, y){
+    if(x>0){
+      clearInterval(timer)
+      setFrame(x -= 120);
+      setCounter(y -= 1);
+      interval((x-120), (y-1));
+    }else{
+      clearInterval(timer)
+      setFrame(x +=480);
+      setCounter(y += 4);
+      interval(480, 4);
+    }
   }
 
 
@@ -135,11 +147,11 @@ const CarouselImages = () => {
           <div className="relative h-[18px]">
 
             {/* Scroll bar under the carousel
-                fix the hover effects (the arrow doesn't highlight at same time as the background) */}
+                fix the hover effects */}
             
             {/* leftbutton */}
-            <div className="absolute w-[38px] top-0 bottom-0 rounded-[3px] block cursor-pointer bg-[#233c5166] hover:bg-[#417a9b]" onClick={(e)=> incrementLoc(e)}>
-              <span className="h-[7px] w-[9px] ml-[13px] mt-[5px] inline-block bg-no-repeat bg-right-top hover:bg-right bg-0 bg-[url('https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png')]"></span>
+            <div className="group absolute w-[38px] top-0 bottom-0 rounded-[3px] block cursor-pointer bg-[#233c5166] hover:bg-[#417a9b]" onClick={()=> decrementLoc(frame, counter)}>
+              <span className="h-[7px] w-[9px] ml-[13px] mt-[5px] inline-block bg-no-repeat bg-right-top group-hover:bg-right bg-0 bg-[url('https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png')]"></span>
             </div>
             {/* center bar with indicator  bar width = 522px bar-1/2indicator = 492px */}
             <input type='range' className={Styles.slider} min="50"  onChange={moveScrollLoc} ></input>
@@ -149,8 +161,8 @@ const CarouselImages = () => {
             {/* </div> */}
 
             {/* rightbutton */}
-            <div className="absolute w-[38px] top-0 bottom-0 rounded-[3px] cursor-pointer right-0 bg-[#233c5166] hover:bg-[#417a9b]" onClick={(e)=> decrementLoc(e)}>
-              <span className='h-[7px] w-[9px] ml-[15px] mt-[5px] inline-block bg-no-repeat bg-top hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
+            <div className="group absolute w-[38px] top-0 bottom-0 rounded-[3px] cursor-pointer right-0 bg-[#233c5166] hover:bg-[#417a9b]" onClick={()=> incrementLoc(frame, counter)}>
+              <span className='h-[7px] w-[9px] ml-[15px] mt-[5px] inline-block bg-no-repeat bg-top group-hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
             </div>
           </div>
         </div>
