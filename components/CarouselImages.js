@@ -41,7 +41,7 @@ const CarouselImages = () => {
   
   // indicator is based off the scrollbar
   function moveScrollLoc(event){
-    setVal((event.target.value - 50) * (0.04))
+    setVal(event.target.value * 0.02)
   }
 
   function incrementLoc(x, y){
@@ -154,7 +154,7 @@ const CarouselImages = () => {
               <span className="h-[7px] w-[9px] ml-[13px] mt-[5px] inline-block bg-no-repeat bg-right-top group-hover:bg-right bg-0 bg-[url('https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png')]"></span>
             </div>
             {/* center bar with indicator  bar width = 522px bar-1/2indicator = 492px */}
-            <input type='range' className={Styles.slider} min="50"  onChange={moveScrollLoc} ></input>
+            <input type='range' className={Styles.slider} min="1" max='100' defaultValue={1} onChange={moveScrollLoc} ></input>
             {/* <div className="absolute left-[39px] right-[39px] top-0 bottom-0 bg-[#00000033] rounded-[3px]" onClick={(e) => moveScrollLoc(e)}> */}
               {/* indicator */}
               {/* <div className="absolute left-0 bg-[#233c5166] h-[18px] w-[60px] rounded-[3px] hover:bg-[#417a9b] cursor-pointer"></div> */}
