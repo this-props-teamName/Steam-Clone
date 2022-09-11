@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import LangStyle from '../styles/header.module.css'
+import Link from 'next/link'; 
 
 
 const Header = () => {
@@ -22,16 +23,18 @@ const Header = () => {
   return (
     <header className="bg-[#171a21] bg-center-top min-w-[940px] font-sans font-normal text-[14px] px-[16px]">
       {/* this div hold all the the stuff in the header */}
-      <div className="relative h-[104px] w-[940px] mx-auto my-0 z-[402]">
-        <div className="float-left pt-[30px] mr-[40px]">
+      <div className="relative h-[104px] w-[940px] mx-auto my-0 z-[402] ">
+        <div className="float-left pt-[30px] mr-[40px] ">
+          <a href='https://store.steampowered.com/'>
           <img
-            className="h-[44px] w-[176px]"
+            className="h-[44px] w-[176px]cursor-pointer"
             src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
           />
+          </a>
         </div>
         {/* The second div here is for the options layed out next to the logo */}
         <div className="absolute left-[200px]">
-          <a className="block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]" onMouseEnter={() => setOnHoverStore(true) } onMouseLeave={() => setOnHoverStore(false)}>
+          <a className="block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]" onMouseEnter={() => setOnHoverStore(true) } onMouseLeave={() => setOnHoverStore(false)} >
             Store
           </a>
           <a className="block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4] " onMouseEnter={() => setOnHoverComm(true) } onMouseLeave={() => setOnHoverComm(false)}>
@@ -57,27 +60,27 @@ const Header = () => {
                   p-[10px] shadow-[3px_3px_5px_-3px_#000] text-left " ></div> */}
           <div className={storeClass()} onMouseEnter={() => setOnHoverStore(true) } onMouseLeave={() => setOnHoverStore(false)}>
             <div>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px]  py-[4px] no-underline hover:text-[#fff] ">
+              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px]  py-[4px] no-underline hover:text-[#fff] " href='https://store.steampowered.com/'>
                 Home
               </a>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]">
+              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]" href='https://store.steampowered.com/login/?redir=explore%2F%3Fsnr%3D1_4_4__global-header&redir_ssl=1&snr=1_4_4__global-header' >
                 Discovery Queue
               </a>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline  hover:text-[#fff] ">
+              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline  hover:text-[#fff] " href='https://steamcommunity.com/login/home/?goto=%2Fmy%2Fwishlist%2F'>
                 WishList
               </a>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline  hover:text-[#fff]">
+              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline  hover:text-[#fff]" href='https://store.steampowered.com/points/shop/'>
                 Point Shop
               </a>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline  hover:text-[#fff]">
+              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline  hover:text-[#fff]" href='https://store.steampowered.com/news/'>
                 News
               </a>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]">
+              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]" href='https://store.steampowered.com/stats/'>
                 Stats
               </a>
-              <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]">
+              {/* <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]">
                 ABOUT
-              </a>
+              </a> */}
             </div>
           </div>
           {/* --------Hidden hover for Community---- */}
@@ -85,19 +88,19 @@ const Header = () => {
           {/* <div className=" absolute z-[1500] opacity-1 left-[59px] top-[64px] bg-[#171a21] max-w-[132px]
                   p-[10px] shadow-[3px_3px_5px_-3px_#000] text-left " ></div> */}
           <div className={commClass()} onMouseEnter={() => setOnHoverComm(true) } onMouseLeave={() => setOnHoverComm(false) }>
-            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]">
+            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]" href='https://steamcommunity.com/'>
               Home
             </a>
-            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]">
+            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]" href='https://steamcommunity.com/discussions/'>
               Discussions
             </a>
-            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]">
+            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]" href='https://steamcommunity.com/workshop/'>
               Workshop
             </a>
-            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]">
+            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]" href='https://steamcommunity.com/market/'>
               Market
             </a>
-            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]">
+            <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] hover:text-[#fff]" href='https://steamcommunity.com/?subsection=broadcasts'>
               Broadcast
             </a>
           </div>
