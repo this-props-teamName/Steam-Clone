@@ -2,6 +2,7 @@ import { carouselState } from './state'
 import { useRecoilState } from 'recoil'
 import { arrow } from '../styles/Carousel.module.css'
 import { useState, useEffect } from 'react'
+import imageStyles from "../styles/imageModal.module.css"
 
 
 const CarouselImages = () => {

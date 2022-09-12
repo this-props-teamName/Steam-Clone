@@ -1,3 +1,14 @@
+.newModal_background {
+    background-color: rgba(0,0,0,0.8);
+    display: block;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .screenshot_popup_modal {
     position: fixed;
     z-index: 1000;
@@ -26,11 +37,31 @@
     text-decoration: none;
     color: #ffffff;
 }
+.download
+ {
+    -webkit-user-drag: none;
+    border: none;
+    display: inline;
+    padding-left: 3px
+}
 
 .screenshot_img {
     cursor: pointer;
     -webkit-user-drag: none;
     border: none;
+    opacity: 1; 
+    max-width: 1420px; 
+    max-height:520px
+}
+
+.screenshot_img2 {
+    cursor: pointer;
+    -webkit-user-drag: none;
+    border: none;
+    opacity: 1; 
+    max-width: 1420px; 
+    max-height:520px;
+    display: none
 }
 
 .screenshot_popup_modal_footer {

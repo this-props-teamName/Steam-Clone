@@ -1,13 +1,13 @@
 import shareStyles from "../styles/EmbedRow.module.css"
 import React, { useState } from "react"
 
-
 const EmbedRow = () => {
     const [shareBox, setShareBox] = useState(false);
     const [showEmbed, setEmbedBox] = useState(false);
     const [showBase, setBaseBox] = useState(false);
     const [showDeluxe, setDeluxeBox] = useState(false);
     const [showReport, setReportBox] = useState(false);
+
 
     return (
         <div className = {shareStyles.box}>
