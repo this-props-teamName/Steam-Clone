@@ -1,17 +1,12 @@
 import shareStyles from "../styles/EmbedRow.module.css"
 import React, { useState } from "react"
 
-
 const EmbedRow = () => {
     const [shareBox, setShareBox] = useState(false);
     const [showEmbed, setEmbedBox] = useState(false);
-    const [showBase, setBaseBox] = useState(false)
-    const [showDeluxe, setDeluxeBox] = useState(false)
+    const [showBase, setBaseBox] = useState(false);
+    const [showDeluxe, setDeluxeBox] = useState(false);
     const [showReport, setReportBox] = useState(false);
-    const [selectedRadioBtn, setSelectedRadioBtn] = useState('radio1');
-
-    const isRadioSelected = (value) => selectedRadioBtn === value;
-    const handleRadioClick = (event) => setSelectedRadioBtn(event.target.value);
 
 
     return (
@@ -42,6 +37,7 @@ const EmbedRow = () => {
 
 {/* {Modal for share button} */}
             {shareBox ? (
+                        <div className = {shareStyles.background}>
                         <div className = {shareStyles.newModal}>
                         <div className = {shareStyles.top_bar}></div>
                         <div>
@@ -85,10 +81,12 @@ const EmbedRow = () => {
                             </div>
                         </div>
                     </div>
+                </div>
             ) : null}
 
 {/* Modal for the Embed Btn*/}
             {showEmbed ? (
+            <div className = {shareStyles.background}>
                 <div className = {shareStyles.embedModal}>
                     <div className = {shareStyles.top_bar}></div>
                     <div>
@@ -146,19 +144,91 @@ const EmbedRow = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             ) : null}
 
 {/* Modal for the Create Widget*/}
-            {showBase ? (
-                <div className = {shareStyles.createModal}>
-                    <div className = {shareStyles.top_bar}></div>
-                </div>
-            ): null}
+        {showBase ? (
+                    <div className = {shareStyles.background}>
+                        <div className = {shareStyles.createModal}>
+                            <div className = {shareStyles.top_bar}></div>
+                                <div>
+                                    <div className ={shareStyles.header}>
+                                        <div 
+                                            onClick={() => setBaseBox(false)}
+                                            className = {shareStyles.close}>
+                                        </div>
+                                    <div className = {shareStyles.title}>Create Widget to Embed</div>
+                                </div>
+                            </div>
+                            <div className = {shareStyles.content_border}>
+                                <div className = {shareStyles.content}>
+                                    <div>
+                                        <div className = {shareStyles.embed_modal}>
+                                            <div className = {shareStyles.widget_create}>
+                                                <div className = {shareStyles.widget_container}>
+                                                    <iframe 
+                                                    src="https://store.steampowered.com/widget/990080/"
+                                                frameBorder="0"
+                                                width="646"
+                                                height="190" 
+                                                ></iframe>
+                                                </div>
+                                                <p className = {shareStyles.small}> {"Copy and paste the HTML below into your website to make the above widget appear"}</p>
+                                                <textarea className = {shareStyles.widget_text} placeholder= {"<iframe src=" + "\"https://store.steampowered.com/widget/990080/326241/\"" + " frameborder=" + " \"0\"" + " width=" + " \"646\"" + " height=" + " \"190\"" +"></iframe>"}></textarea>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ): null}
+
+
+{showDeluxe ? (
+                    <div className = {shareStyles.background}>
+                        <div className = {shareStyles.createModal}>
+                            <div className = {shareStyles.top_bar}></div>
+                                <div>
+                                    <div className ={shareStyles.header}>
+                                        <div 
+                                            onClick={() => setDeluxeBox(false)}
+                                            className = {shareStyles.close}>
+                                        </div>
+                                    <div className = {shareStyles.title}>Create Widget to Embed</div>
+                                </div>
+                            </div>
+                            <div className = {shareStyles.content_border}>
+                                <div className = {shareStyles.content}>
+                                    <div>
+                                        <div className = {shareStyles.embed_modal}>
+                                            <div className = {shareStyles.widget_create}>
+                                                <div className = {shareStyles.widget_container}>
+                                                    <iframe 
+                                                    src="https://store.steampowered.com/widget/990080/757087/"
+                                                frameBorder="0"
+                                                width="646"
+                                                height="190" 
+                                                ></iframe>
+                                                </div>
+                                                <p className = {shareStyles.small}> {"Copy and paste the HTML below into your website to make the above widget appear"}</p>
+                                                <textarea className = {shareStyles.widget_text} placeholder= {"<iframe src=" + "\"https://store.steampowered.com/widget/990080/757087/\"" + " frameborder=" + " \"0\"" + " width=" + " \"646\"" + " height=" + " \"190\"" +"></iframe>"}></textarea>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ): null}
+
 
             
 {/* Report This Prodcut */}
             {showReport ? (
-                <div className= {` ${shareStyles.reportModal} ${shareStyles.scrollbar}`}>
+            <div className = {shareStyles.background}>
+                <div className= {shareStyles.reportModal}>
                      <div className = {shareStyles.top_bar}></div>
                         <div>
                             <div className ={shareStyles.header}>
@@ -303,10 +373,16 @@ const EmbedRow = () => {
                                                     </div>
                                             </div>
                                             <div className= {shareStyles.btn_container}>
-                                                <div className= {shareStyles.green_btn}>
+                                                <div 
+                                                className= {shareStyles.green_btn}
+                                                onClick={() => setReportBox(false)} 
+                                                >
                                                     <span className= {shareStyles.green_btn_medium}>Report</span>
                                                 </div>
-                                                <div className= {shareStyles.gray_btn}>
+                                                <div 
+                                                className= {shareStyles.gray_btn}
+                                                onClick={() => setReportBox(false)}
+                                                >
                                                     <span className= {shareStyles.gray_btn_medium}>
                                                         Cancel
                                                     </span>
@@ -317,6 +393,7 @@ const EmbedRow = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 ): null}
             </div>
     )

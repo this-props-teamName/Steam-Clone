@@ -1,0 +1,112 @@
+.newModal_background {
+    background-color: rgba(0,0,0,0.8);
+    display: block;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.screenshot_popup_modal {
+    position: fixed;
+    z-index: 1000;
+    max-width: 1442px;
+    max-height: 594px;
+    left: 289px;
+    top: 60px;
+}
+
+.screenshot_popup_modal_content {
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    background: linear-gradient( 135deg, #356480 5%,#1a303d 95%);
+}
+
+.screenshot_popup_modal_title {
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #222d3d;
+}
+
+.screenshot_a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.download
+ {
+    -webkit-user-drag: none;
+    border: none;
+    display: inline;
+    padding-left: 3px
+}
+
+.screenshot_img {
+    cursor: pointer;
+    -webkit-user-drag: none;
+    border: none;
+    opacity: 1; 
+    max-width: 1420px; 
+    max-height:520px
+}
+
+.screenshot_img2 {
+    cursor: pointer;
+    -webkit-user-drag: none;
+    border: none;
+    opacity: 1; 
+    max-width: 1420px; 
+    max-height:520px;
+    display: none
+}
+
+.screenshot_popup_modal_footer {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn_medium_previous {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #67c1f5 !important;
+    background: rgba( 103, 193, 245, 0.2 );
+}
+
+.btn_medium_next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #67c1f5 !important;
+    background: rgba( 103, 193, 245, 0.2 );
+}
+
+.btn_medium_span {
+    line-height: 26px;
+    padding: 0 15px;
+    font-size: 15px;
+    border-radius: 2px;
+    display: block;
+    background: transparent;
+}

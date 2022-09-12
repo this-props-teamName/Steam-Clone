@@ -1,0 +1,248 @@
+.newModal_background {
+    background-color: rgba(0,0,0,0.7);
+    display: block;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.newModal {
+    position: fixed;
+    z-index: 1000;
+    max-width: 1442px;
+    left: 380px;
+    top: 12px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    min-width: 500px;
+    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+}
+
+.top_bar {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #00ccff, #3366ff);
+}
+
+.newmodal_header {
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.close {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVBREZBRDlBNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVBREZBRDlCNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUFERkFEOTg3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUFERkFEOTk3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4iulRzAAABPElEQVR42mI8cuQIAyWABUqbAXEylH0fiDtwqI8FYhsoewEQH4cZcBaI64DYG8p/AVWADDyAeD4QMwPxJiA+BRJkgkr+BeJoIL4D5U8DYi0kzepAvAKq+TJU7V9kA0DgIxD7Q2lOIF4NpfmBeAuUfg3EPkD8BaaJCc2Z14A4EcoGuWAC1NkqQPwLqvkRsgYmLAG1HoiboOw0IA6EshNh/iZkAAjUA/FBJP5KIF6GTSEuAwygUQsDflAxogwQAuJ10AAExcpNKHsjEIsSMoAZGl2K0EALBeIIKFsOKSpxGtACxK5Qdi4QX4DiAqiYExB34TIgBIgrkAJtFpLcdKgYCBQBcRRMghGamUBxfhKIeaB+NkFOLFAAkjsDTZXfgdgK5DpYXvBGiqYpWDQzQMVAYZKDlDcuMFKanQECDAAqw0LA+GRiqAAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    float: right;
+    margin-top: 9px;
+    margin-right: 9px;
+    height: 16px;
+    width: 16px;
+    opacity: 0.7;
+}
+
+.title_text {
+    padding: 32px 32px 0px 32px;
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.newModal_content_border {
+    padding: 0 1px 1px 1px;
+    display: flex;
+}
+
+.newModal_content {
+    max-height: 594px;
+    width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    padding: 32px;
+    font-size: 14px;
+    color: #acb2b8;
+    position: relative;
+}
+
+.app_tag_modal {
+    display:block;
+    width: 546px;
+}
+
+.app_content {
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.seperator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 272px;
+    width: 1px;
+    background-color: #3c3d3e;
+}
+
+.app_tag_left {
+    width: 256px;
+    float: left;
+}
+
+.header2 {
+    color: #969696;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 6px;
+    text-transform: none;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 0;
+    font-family: "Motiva Sans", Sans-serif;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
+.app_tag_modal_tooltip {
+    font-size: 11px;
+    color: #626366;
+    cursor: default;
+    margin-left: 8px;
+}
+
+.app_tag_control {
+    height: 23px;
+    line-height: 19px;
+    color: #626366;
+    padding: 2px;
+    background-color: #222225;
+    margin-bottom: 2px;
+}
+
+.app_tag_checkbox {
+    display: none;
+    background: url(https://store.cloudflare.steamstatic.com/public/images/v6/tag_check.png) bottom center no-repeat;
+    margin-left: 4px;
+    float: right;
+    width: 13px;
+    height: 19px;
+    cursor: pointer;
+}
+
+.app_tag {
+    display: inline-block;
+    line-height: 19px;
+    padding: 0 7px;
+    color: #67c1f5;
+    background-color: rgba( 103, 193, 245, 0.2 );
+    box-shadow: none;
+    margin-right: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.app_tag:hover {
+    text-decoration: none;
+    color: #ffffff; 
+    background: linear-gradient(135deg, #67c1f5 0%,#417a9b 100%);
+}
+
+.app_tag_right {
+	float: right;
+	width: 256px;
+}
+
+.header3 {
+    color: #969696;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 6px;
+    text-transform: none;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 0;
+    white-space: normal;
+}
+
+.paragraph {
+    line-height: 17px;
+    margin-bottom: 8px;
+    white-space: normal;
+}
+
+.blue_btn {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #67c1f5 !important;
+    background: rgba( 103, 193, 245, 0.2 );
+}
+
+.blue_btn_span {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 2px;
+    display: block;
+    background: transparent;
+}
+
+.newModal_btn {
+    text-align: right;
+}
+
+.btn_grey_steamui {
+    margin-left: 12px;
+    margin-top: 12px;
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #dfe3e6;
+    background: transparent;
+}
+
+.btn_medium_span {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 2px;
+    display: block;
+    background: linear-gradient( to right, #32363f 5%, #32363f 95%);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+    transition: all 0.2s ease-out;
+}
+
+.clear {
+    clear: both;
+}
