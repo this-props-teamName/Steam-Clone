@@ -1,12 +1,8 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 
-const login = () => {
+const login = ({children}) => {
   return (
     <>
-      <Header />
       <div>login</div>
-      <Footer />
     </>
   )
 }
