@@ -2,33 +2,76 @@ import { carouselState } from './state'
 import { useRecoilState } from 'recoil'
 import { arrow } from '../styles/Carousel.module.css'
 import { useState, useEffect } from 'react'
-import imageStyles from "../styles/imageModal.module.css"
+import Styles from '../styles/Carousel.module.css'
 
 
 const CarouselImages = () => {
   const [carouselInfo, setCarouselInfo] = useRecoilState(carouselState);
   const [frame, setFrame] = useState(0)
   const [counter, setCounter] = useState(0)
+  const [timer, setTimer] = useState(0)
+  const [val, setVal] =useState(0)
 
- 
   useEffect(()=>{
-    setInterval(() => {
-      if(frame < 480){
-        setFrame(frame += 120)
-        setCounter(counter += 1)
-      }else{
-        setFrame(frame -= 480)
-        setCounter(counter -= 4)
-      }
-    },5000)
+    interval(frame, counter)
   },[])
 
+  function interval(x, y){
+    setTimer(setInterval(() => {
+      if(x < 480){
+        setFrame(x += 120)
+        setCounter(y += 1)
+      }else{
+        setFrame(x -= 480)
+        setCounter(y -= 4)
+      }
+    },5000))
+  }
   
   let clicked = (x, y) => {
-    clearInterval(0)
+    clearInterval(timer)
     setFrame(x)
     setCounter(y)
+    interval(x,y)
   }
+
+  let scrollTop = () => {
+    return `w-[602px] left-[${val}px] absolute`
+  }
+  
+  // indicator is based off the scrollbar
+  function moveScrollLoc(event){
+    setVal(event.target.value * 0.02)
+  }
+
+  function incrementLoc(x, y){
+    if(x<480){
+      clearInterval(timer)
+      setFrame(x += 120);
+      setCounter(y += 1);
+      interval(x, y);
+    }else{
+      clearInterval(timer)
+      setFrame(x -=480);
+      setCounter(y -= 4);
+      interval(0, 0);
+    }
+  }
+
+  function decrementLoc(x, y){
+    if(x>0){
+      clearInterval(timer)
+      setFrame(x -= 120);
+      setCounter(y -= 1);
+      interval((x-120), (y-1));
+    }else{
+      clearInterval(timer)
+      setFrame(x +=480);
+      setCounter(y += 4);
+      interval(480, 4);
+    }
+  }
+
 
   if(carouselInfo.large_img_url){
   return (
@@ -77,10 +120,10 @@ const CarouselImages = () => {
             <script></script> */}
           </div>
           <div className="mt-[4px] relative h-[69px] mb-[4px] z-40">
-            <div className="w-[602px] left-0 absolute">
+            {/* this is what we want to move left changes make left negative */}
+            <div className={scrollTop()}>
               {/* frame of mini picutres */}
               <div className='absolute w-[116px] h-[72px] z-50 top-[-3px] border-[3px] cursor-pointer border-[#fff]' style={{left:`${frame}px`}}>
-               {console.log(frame)}
                 <div className={arrow}></div>
               </div>
               {/* small images below the main viewer of the carousel */}
@@ -104,16 +147,22 @@ const CarouselImages = () => {
           <div className="relative h-[18px]">
 
             {/* Scroll bar under the carousel
-                fix the hover effects (the arrow doesn't highlight at same time as the background) */}
-            <div className="absolute w-[38px] top-0 bottom-0 rounded-[3px] block cursor-pointer bg-[#233c5166] hover:bg-[#417a9b]">
-              <span className="h-[7px] w-[9px] ml-[13px] mt-[5px] inline-block bg-no-repeat bg-right-top hover:bg-right bg-0 bg-[url('https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png')]"></span>
+                fix the hover effects */}
+            
+            {/* leftbutton */}
+            <div className="group absolute w-[38px] top-0 bottom-0 rounded-[3px] block cursor-pointer bg-[#233c5166] hover:bg-[#417a9b]" onClick={()=> decrementLoc(frame, counter)}>
+              <span className="h-[7px] w-[9px] ml-[13px] mt-[5px] inline-block bg-no-repeat bg-right-top group-hover:bg-right bg-0 bg-[url('https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png')]"></span>
             </div>
-            <div className="absolute left-[39px] right-[39px] top-0 bottom-0 bg-[#00000033] rounded-[3px] ">
-              <div></div>
-              <div className="absolute left-0 bg-[#233c5166] h-[18px] w-[60px] rounded-[3px] hover:bg-[#417a9b] cursor-pointer e"></div>
-            </div>
-              <div className="absolute w-[38px] top-0 bottom-0 rounded-[3px] cursor-pointer right-0 bg-[#233c5166] hover:bg-[#417a9b]">
-              <span className='h-[7px] w-[9px] ml-[15px] mt-[5px] inline-block bg-no-repeat bg-top hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
+            {/* center bar with indicator  bar width = 522px bar-1/2indicator = 492px */}
+            <input type='range' className={Styles.slider} min="1" max='100' defaultValue={1} onChange={moveScrollLoc} ></input>
+            {/* <div className="absolute left-[39px] right-[39px] top-0 bottom-0 bg-[#00000033] rounded-[3px]" onClick={(e) => moveScrollLoc(e)}> */}
+              {/* indicator */}
+              {/* <div className="absolute left-0 bg-[#233c5166] h-[18px] w-[60px] rounded-[3px] hover:bg-[#417a9b] cursor-pointer"></div> */}
+            {/* </div> */}
+
+            {/* rightbutton */}
+            <div className="group absolute w-[38px] top-0 bottom-0 rounded-[3px] cursor-pointer right-0 bg-[#233c5166] hover:bg-[#417a9b]" onClick={()=> incrementLoc(frame, counter)}>
+              <span className='h-[7px] w-[9px] ml-[15px] mt-[5px] inline-block bg-no-repeat bg-top group-hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
             </div>
           </div>
         </div>

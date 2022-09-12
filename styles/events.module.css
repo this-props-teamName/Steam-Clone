@@ -50,20 +50,27 @@
     font-weight: 500;
     color: rgba(40, 156, 255, 0);
     overflow: hidden;
-    filter: blur(5px);
+    filter: blur(0px);
     user-select: none;
     text-rendering: optimizeSpeed;
     transform: scale(1);
     z-index: 2;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s ease-in-out;
+    transition: filter .24s 
+    /* filter .24s ease-in-out, transform .24s ease-in-out, color .24s ease-in-out; */
+}
+#hoverId {
+    transition-timing-function: ease-in-out;
+}
+.rightInner:hover{
+    filter: blur(5px); 
 }
 
 .rightInner2 {
     margin: 10px 20px;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(26, 25, 25, 0.627);
     line-height: 20px;
     font-weight: 300;
     overflow: hidden;
@@ -98,4 +105,31 @@
     text-align: left;
     color: rgba(255, 255, 255, .5);
     font-size: 13px;
+}
+
+.leftImg {
+    width: 100%; 
+    height: auto; 
+    position: relative; 
+    left: 0; 
+    top: 0; 
+    display: block;
+    filter: blur(0px); 
+    transition: filter .24s;
+}
+
+.leftImg:hover{
+    filter: blur(5px); 
+    
+}
+
+.leftDiv {
+    height: 100%; 
+    flex-direction: column;
+    display: flex;
+    filter: blur(0px); 
+    transition: filter .24s;
+}
+.leftDiv:hover {
+    filter: blur(5px);
 }

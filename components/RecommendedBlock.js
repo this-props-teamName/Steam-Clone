@@ -1,6 +1,14 @@
-import React from 'react'
+import Styles from '../styles/Recommended.module.css'
+import { useState } from 'react'
 
 const RecommendedBlock = () => {
+  const [bottomScroll, setBottomScroll] = useState(0)
+
+
+  function moveScrollLoc(event){
+    // setVal((event.target.value) * (0.04))
+  }
+
   return (
     <div className='mt-[40px] mb-[16px] block text-[14px] text-[#acb2b8] font-sans'>
       <div className='p-0 m-0 block text-[14px] text-[#acb2b8] font-sans'>
@@ -9,8 +17,8 @@ const RecommendedBlock = () => {
         </div>
         <h2 className='font-sans text-[14px] uppercase text-[#fff] mt-0 mr-0 mb-[10px] ml-0 tracking-[0.03em] font-normal pt-[2px] leading-[26px] bg-[url("https://store.cloudflare.steamstatic.com/public/images/v6/maincol_gradient_rule.png")] bg-no-repeat bg-left-bottom'>More like this</h2>
       </div>
-      <div className='h-[132px] mb-[2px] text-[14px] text-[#acb2b8] font-sans'>
-        <div className='overflow-x-scroll whitespace-nowrap w-auto block text-[14px] text-[#acb2b8] font-sans'>
+      <div className='h-[132px] mb-[2px] text-[14px] text-[#acb2b8] font-sans overflow-y-hidden'>
+        <div className='overflow-x-scroll whitespace-nowrap w-auto block text-[14px] text-[#acb2b8] font-sans pb-[17px]'>
           {/* The start of a new recommendation for The Elder Scrolls*/}
           <a className='float-none inline-block align-top bg-[#00000033] p-[15px] mr-[2px] h-[132px] border-[1px] border-[#00000000] relative decoration-0 text-[#fff] cursor-pointer hover:border-[#67c1f5]' href='https://store.steampowered.com/app/306130/The_Elder_Scrolls_Online/?snr=1_5_9__300_1'>
             <img src='https://cdn.cloudflare.steamstatic.com/steam/apps/306130/capsule_184x69.jpg?t=1661194916' className='w-[171px] border-0 m-0 p-0 text-[#fff] curson-pointer text-[14px] font-sans' />
@@ -136,18 +144,19 @@ const RecommendedBlock = () => {
       {/* scroll bar */}
       <div className='bg-[#122333] relative h-[18px] select-none text-[14px] text-[#acb2b8] font-sans'>
         {/* left button/arrow */}
-        <div className='absolute w-[38px] top-0 bottom-0 bg-[#00000066] rounded-[3px] cursor-pointer left-0 block select-none text-[12px] text-[#acb2b8] hover:bg-[#417a9b]'>
-          <span className='inline-block bg-no-repeat w-[9px] h-[7px] ml-[13px] mt-[5px] cursor-pointer select-none font-sans text-[14px] text-[#acb2b8] bg-right-top hover:bg-right bg-0 bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
+        <div className='group absolute w-[38px] top-0 bottom-0 bg-[#00000066] rounded-[3px] cursor-pointer left-0 block select-none text-[12px] text-[#acb2b8] hover:bg-[#417a9b]'>
+          <span className='inline-block bg-no-repeat w-[9px] h-[7px] ml-[13px] mt-[5px] cursor-pointer select-none font-sans text-[14px] text-[#acb2b8] bg-right-top group-hover:bg-right bg-0 bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
         </div>
         {/* right button/arrow */}
-        <div className='absolute w-[38px] top-0 bottom-0 bg-[#00000066] rounded-[3px] cursor-pointed right-0 select-none text-[12px] font-sans hover:bg-[#417a9b]'>
-          <span className='inline-block bg-no-repeat w-[9px] h-[7px] ml-[15px] mt-[5px] cursor-pointer select-none font-sans text-[14px] text-[#acb2b8] bg-top hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
+        <div className='group absolute w-[38px] top-0 bottom-0 bg-[#00000066] rounded-[3px] cursor-pointed right-0 select-none text-[12px] font-sans hover:bg-[#417a9b]'>
+          <span className='inline-block bg-no-repeat w-[9px] h-[7px] ml-[15px] mt-[5px] cursor-pointer select-none font-sans text-[14px] text-[#acb2b8] bg-top group-hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
         </div>
         {/* center scroll indicator */}
         <div className='p-0 m-0 block select-none text-[14px] text-[#acb2b8]'></div>
-        <div className='absolute left-[39px] right-[39px] top-0 bottom-0 bg-[#00000033] rounded-[3px] select-none text-[14px] text-[#acb2b8] font-sans'>
-          <div className='bg-[#00000080] top-0 rounded-[3px] h-[18px] w-[60px] cursor-pointer select-none text-[14px] text-[#acb2b8] font-sans hover:bg-[#417a9b]'></div>
-        </div>
+        {/* <div className='absolute left-[39px] right-[39px] top-0 bottom-0 bg-[#00000033] rounded-[3px] select-none text-[14px] text-[#acb2b8] font-sans'> */}
+        <input type='range' className={Styles.slider} min="1" max='100' defaultValue={1} onChange={moveScrollLoc} ></input>
+          {/* <div className='bg-[#00000080] top-0 rounded-[3px] h-[18px] w-[60px] cursor-pointer select-none text-[14px] text-[#acb2b8] font-sans hover:bg-[#417a9b]'></div> */}
+        {/* </div> */}
       </div>
     </div>
   )

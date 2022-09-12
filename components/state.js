@@ -18,7 +18,7 @@ export const systemReqState = atom ({
     key: 'recommendedReq', 
     default: [],
 }); 
-export const commentsState = atom ({
-    key: 'comments', 
+export const newsState = atom ({
+    key: 'news', 
     default: [],
 }); 
