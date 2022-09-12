@@ -1,9 +1,10 @@
+import Login from '../components/Login'
 
 const login = ({children}) => {
   return (
-    <>
-      <div>login</div>
-    </>
+      <div>
+        <Login />
+      </div>
   )
 }
 
