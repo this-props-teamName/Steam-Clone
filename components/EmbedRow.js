@@ -7,7 +7,17 @@ const EmbedRow = () => {
     const [showBase, setBaseBox] = useState(false);
     const [showDeluxe, setDeluxeBox] = useState(false);
     const [showReport, setReportBox] = useState(false);
+    const [val, setVal]= useState(false)
 
+    function widgetSwap(val) {       
+        if(val) {
+            setDeluxeBox(true)
+            setBaseBox(false)
+        } else {
+            setDeluxeBox(false)
+            setBaseBox(true)
+        }
+    }
 
     return (
         <div className = {shareStyles.box}>
@@ -36,10 +46,11 @@ const EmbedRow = () => {
             </div>
 
 {/* {Modal for share button} */}
-            {shareBox ? (
-                        <div className = {shareStyles.background}>
+         {shareBox ? (
+                <div>
+                    <div className = {shareStyles.background} onClick={() => setShareBox(false)}>
                         <div className = {shareStyles.newModal}>
-                        <div className = {shareStyles.top_bar}></div>
+                            <div className = {shareStyles.top_bar}></div>
                         <div>
                             <div className = {shareStyles.header}>
                                 <div 
@@ -82,10 +93,12 @@ const EmbedRow = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             ) : null}
 
 {/* Modal for the Embed Btn*/}
-            {showEmbed ? (
+    {showEmbed ? (
+        <div>
             <div className = {shareStyles.background}>
                 <div className = {shareStyles.embedModal}>
                     <div className = {shareStyles.top_bar}></div>
@@ -109,7 +122,7 @@ const EmbedRow = () => {
                                         type= "radio"
                                         name= "w_rsubid"
                                         id="wp__326241"
-                                        value= '326241'                                   
+                                        value= {() => setVal(false)}                                  
                                         />
                                         <label htmlFor= "wp_326241"> Hogwarts Legacy </label>
                                     </div>
@@ -118,7 +131,7 @@ const EmbedRow = () => {
                                         type= "radio"
                                         name= "w_rsubid"
                                         id="wp_757087"
-                                        value= "757087"
+                                        value= {() => setVal(true)}
                                         />
                                         <label> Hogwarts Legacy Deluxe Edition </label>
                                     </div>
@@ -129,12 +142,7 @@ const EmbedRow = () => {
                                 </div>
                                 <div className = {shareStyles.btn_container}>
                                     <a 
-                                    onClick= 
-                                    {() => {
-                                        setBaseBox(true);
-                                        console.log('click')
-                                    }}
-                                    
+                                    onClick= {() => {widgetSwap(val)}}
                                     className = {shareStyles.btn_blue}>
                                         <span className = {shareStyles.btn_medium}>Create widget</span>
                                     </a>
@@ -145,10 +153,12 @@ const EmbedRow = () => {
                     </div>
                 </div>
             </div>
+        </div>
             ) : null}
 
 {/* Modal for the Create Widget*/}
         {showBase ? (
+                <div>
                     <div className = {shareStyles.background}>
                         <div className = {shareStyles.createModal}>
                             <div className = {shareStyles.top_bar}></div>
@@ -183,10 +193,12 @@ const EmbedRow = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 ): null}
 
 
 {showDeluxe ? (
+                <div>
                     <div className = {shareStyles.background}>
                         <div className = {shareStyles.createModal}>
                             <div className = {shareStyles.top_bar}></div>
@@ -221,12 +233,14 @@ const EmbedRow = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 ): null}
 
 
             
 {/* Report This Prodcut */}
-            {showReport ? (
+{showReport ? (
+        <div>
             <div className = {shareStyles.background}>
                 <div className= {shareStyles.reportModal}>
                      <div className = {shareStyles.top_bar}></div>
@@ -394,6 +408,7 @@ const EmbedRow = () => {
                         </div>
                     </div>
                 </div>
+            </div>
                 ): null}
             </div>
     )
