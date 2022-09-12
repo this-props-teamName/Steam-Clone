@@ -9,7 +9,7 @@ body {
 }
 
 html{
-  background-color: #1e2837;
+  background-color: #171a21;
 }
 
 div {
@@ -36,7 +36,7 @@ a {
 ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
-  background: transparent;
+  background: #1e2837;
   z-index: 12;
   overflow: visible;
 }
