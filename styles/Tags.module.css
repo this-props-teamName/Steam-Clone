@@ -1,9 +1,8 @@
 .newModal_background {
-    opacity: 0.8;
+    background-color: rgba(0,0,0,0.8);
     display: block;
     position: fixed;
     z-index: 900;
-    background: #000000;
     top: 0;
     right: 0;
     bottom: 0;
@@ -29,7 +28,7 @@
     background: linear-gradient(to right, #00ccff, #3366ff);
 }
 
-.header {
+.newmodal_header {
     padding: 0px 0px 0px 0px;
     text-align: left;
     font-weight: 300;
@@ -57,6 +56,13 @@
 .title_text {
     padding: 32px 32px 0px 32px;
     display: block;
+    text-align: left;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .newModal_content_border {
@@ -76,6 +82,7 @@
 }
 
 .app_tag_modal {
+    display:block;
     width: 546px;
 }
 
@@ -94,9 +101,8 @@
 }
 
 .app_tag_left {
-    padding-right: 16px;
-    float: left;
     width: 256px;
+    float: left;
 }
 
 .header2 {
@@ -110,7 +116,10 @@
     padding: 0;
     margin: 0;
     font-family: "Motiva Sans", Sans-serif;
+    word-wrap: break-word;
+    white-space: normal;
 }
+
 
 .app_tag_modal_tooltip {
     font-size: 11px;
@@ -153,17 +162,37 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.app_tag:hover {
+    text-decoration: none;
+    color: #ffffff; 
+    background: linear-gradient(135deg, #67c1f5 0%,#417a9b 100%);
 }
 
 .app_tag_right {
-    float: right;
-    width: 256px;
-    padding-left: 16px;
+	float: right;
+	width: 256px;
+}
+
+.header3 {
+    color: #969696;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 6px;
+    text-transform: none;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 0;
+    white-space: normal;
 }
 
 .paragraph {
     line-height: 17px;
     margin-bottom: 8px;
+    white-space: normal;
 }
 
 .blue_btn {
@@ -212,4 +241,8 @@
     background: linear-gradient( to right, #32363f 5%, #32363f 95%);
     box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
     transition: all 0.2s ease-out;
+}
+
+.clear {
+    clear: both;
 }

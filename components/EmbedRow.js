@@ -37,6 +37,7 @@ const EmbedRow = () => {
 
 {/* {Modal for share button} */}
             {shareBox ? (
+                        <div className = {shareStyles.background}>
                         <div className = {shareStyles.newModal}>
                         <div className = {shareStyles.top_bar}></div>
                         <div>
@@ -80,10 +81,12 @@ const EmbedRow = () => {
                             </div>
                         </div>
                     </div>
+                </div>
             ) : null}
 
 {/* Modal for the Embed Btn*/}
             {showEmbed ? (
+            <div className = {shareStyles.background}>
                 <div className = {shareStyles.embedModal}>
                     <div className = {shareStyles.top_bar}></div>
                     <div>
@@ -141,10 +144,12 @@ const EmbedRow = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             ) : null}
 
 {/* Modal for the Create Widget*/}
         {showBase ? (
+                    <div className = {shareStyles.background}>
                         <div className = {shareStyles.createModal}>
                             <div className = {shareStyles.top_bar}></div>
                                 <div>
@@ -177,10 +182,12 @@ const EmbedRow = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
                 ): null}
 
 
 {showDeluxe ? (
+                    <div className = {shareStyles.background}>
                         <div className = {shareStyles.createModal}>
                             <div className = {shareStyles.top_bar}></div>
                                 <div>
@@ -213,12 +220,14 @@ const EmbedRow = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
                 ): null}
 
 
             
 {/* Report This Prodcut */}
             {showReport ? (
+            <div className = {shareStyles.background}>
                 <div className= {shareStyles.reportModal}>
                      <div className = {shareStyles.top_bar}></div>
                         <div>
@@ -384,6 +393,7 @@ const EmbedRow = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 ): null}
             </div>
     )

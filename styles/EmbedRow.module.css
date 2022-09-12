@@ -69,10 +69,9 @@
 /* Universal background */
 .background {
     /* display: none; */
-    opacity: .8;
+    background-color: rgba(0,0,0,0.8);
     position: fixed;
     z-index: 900;
-    background: #000000;
     top: 0;
     right: 0;
     bottom: 0;
