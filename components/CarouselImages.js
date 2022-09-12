@@ -75,7 +75,25 @@ const CarouselImages = () => {
     }
   }
 
-  
+  function hidePrev() {
+    if(currentSlide === 0) {
+      return `${currentSlide ? "{imageStyles.btn_medium_previous}" : 'hidden'}`
+    } else {
+      return imageStyles.btn_medium_previous
+    }
+  }
+
+  function hideNext() {
+    if(currentSlide === 4) {
+      return `${currentSlide ? "{imageStyles.btn_medium_next}" : 'hidden'}`
+    } else {
+      return imageStyles.btn_medium_next
+    }
+  }
+
+  console.log(currentSlide)
+
+
   if(carouselInfo.large_img_url){
   return (
       <div className="w-[616] float-left p-[0px] m-[0px] font-sans">
@@ -204,13 +222,13 @@ const CarouselImages = () => {
 
                       </div>
                       <div className= {imageStyles.screenshot_popup_modal_footer}>
-                          <div>1 of 5 screenshots</div>
-                          <div className= {imageStyles.btn_medium_previous}
+                          <div> {currentSlide + 1} of 5 screenshots</div>
+                          <div className= {hidePrev()}
                           onClick={() => setCurrentSlide((previousSlide) => previousSlide - 1)}
                           >
                               <span className= {imageStyles.btn_medium_span}>Prev</span>
                           </div>
-                          <div className= {imageStyles.btn_medium_next}
+                          <div className= {hideNext()}
                           onClick={() => setCurrentSlide(currentSlide + 1)}
                           >
                               <span className= {imageStyles.btn_medium_span}
