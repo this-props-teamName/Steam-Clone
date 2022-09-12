@@ -169,7 +169,7 @@ const EmbedRow = () => {
                                                 <div className = {shareStyles.widget_container}>
                                                     <iframe 
                                                     src="https://store.steampowered.com/widget/990080/"
-                                                frameborder="0"
+                                                frameBorder="0"
                                                 width="646"
                                                 height="190" 
                                                 ></iframe>
@@ -207,7 +207,7 @@ const EmbedRow = () => {
                                                 <div className = {shareStyles.widget_container}>
                                                     <iframe 
                                                     src="https://store.steampowered.com/widget/990080/757087/"
-                                                frameborder="0"
+                                                frameBorder="0"
                                                 width="646"
                                                 height="190" 
                                                 ></iframe>
