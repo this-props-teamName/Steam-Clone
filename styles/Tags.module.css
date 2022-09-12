@@ -1,5 +1,5 @@
 .newModal_background {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.7);
     display: block;
     position: fixed;
     z-index: 900;
@@ -129,7 +129,7 @@
 }
 
 .app_tag_control {
-    height: 19px;
+    height: 23px;
     line-height: 19px;
     color: #626366;
     padding: 2px;
