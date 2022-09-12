@@ -3,6 +3,7 @@ import { useRecoilState } from 'recoil'
 import { arrow } from '../styles/Carousel.module.css'
 import { useState, useEffect } from 'react'
 import Styles from '../styles/Carousel.module.css'
+import imageStyles from "../styles/imageModal.module.css"
 
 
 const CarouselImages = () => {
@@ -11,6 +12,8 @@ const CarouselImages = () => {
   const [counter, setCounter] = useState(0)
   const [timer, setTimer] = useState(0)
   const [val, setVal] =useState(0)
+  const [images, setImages] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(()=>{
     interval(frame, counter)
@@ -72,7 +75,7 @@ const CarouselImages = () => {
     }
   }
 
-
+  
   if(carouselInfo.large_img_url){
   return (
       <div className="w-[616] float-left p-[0px] m-[0px] font-sans">
@@ -84,7 +87,7 @@ const CarouselImages = () => {
             {/* large images of the carousel */}
             <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
               <div className="flex h-[100%] flex-col justify-center">
-                <a className="text-[#67c1f5]" href={carouselInfo.huge_img_url[counter]}>
+                <a className="text-[#67c1f5]" onClick={() => setImages(carouselInfo.huge_img_url[counter])}>
                   <img src={carouselInfo.large_img_url[counter]} />
                 </a>
               </div>
@@ -166,6 +169,59 @@ const CarouselImages = () => {
             </div>
           </div>
         </div>
+
+{/*Modal*/}
+{images ? (
+    <div className= {imageStyles.newModal_background}>
+      <div className= {imageStyles.screenshot_popup_modal}>
+                  <div className= {imageStyles.screenshot_popup_modal_content}>
+                      <div className= {imageStyles.screenshot_popup_modal_title}>
+                          <a 
+                              className= {imageStyles.screenshot_a}
+                              href= "#"
+                              >
+                              Download full-size version
+                              <img className= {imageStyles.download} src="https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif"/> 
+                          </a>
+                      </div>
+                      <div>
+                          <img 
+                          className={imageStyles.screenshot_img}
+                        //   style ="opacity: 1; max-width: 1420px; max-height:520px"
+                          src= {carouselInfo.huge_img_url[currentSlide]}/>
+                          
+                          <img 
+                          className={imageStyles.screenshot_img2}
+                        //   style="display:none;"
+                          src= {carouselInfo.huge_img_url[1]}
+                          />
+
+                            <img 
+                          className={imageStyles.screenshot_img2}
+                        //   style="display:none;"
+                          src= {carouselInfo.huge_img_url[2]}
+                          />
+
+                      </div>
+                      <div className= {imageStyles.screenshot_popup_modal_footer}>
+                          <div>1 of 5 screenshots</div>
+                          <div className= {imageStyles.btn_medium_previous}
+                          onClick={() => setCurrentSlide((previousSlide) => previousSlide - 1)}
+                          >
+                              <span className= {imageStyles.btn_medium_span}>Prev</span>
+                          </div>
+                          <div className= {imageStyles.btn_medium_next}
+                          onClick={() => setCurrentSlide(currentSlide + 1)}
+                          >
+                              <span className= {imageStyles.btn_medium_span}
+                              >Next</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+      ) : null}
+
       </div>
     )
   }
