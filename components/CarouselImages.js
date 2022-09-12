@@ -190,7 +190,8 @@ const CarouselImages = () => {
 
 {/*Modal*/}
 {images ? (
-    <div className= {imageStyles.newModal_background}>
+  <div>
+    <div className= {imageStyles.newModal_background} onClick={() => setImages(false)}></div>
       <div className= {imageStyles.screenshot_popup_modal}>
                   <div className= {imageStyles.screenshot_popup_modal_content}>
                       <div className= {imageStyles.screenshot_popup_modal_title}>
@@ -222,7 +223,7 @@ const CarouselImages = () => {
 
                       </div>
                       <div className= {imageStyles.screenshot_popup_modal_footer}>
-                          <div> {currentSlide + 1} of 5 screenshots</div>
+                          <div className= {imageStyles.screenshot_words}> {currentSlide + 1} of 5 screenshots</div>
                           <div className= {hidePrev()}
                           onClick={() => setCurrentSlide((previousSlide) => previousSlide - 1)}
                           >

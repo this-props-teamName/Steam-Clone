@@ -75,6 +75,10 @@
     text-overflow: ellipsis;
 }
 
+.screenshot_words {
+    color: white;
+}
+
 .btn_medium_previous {
     position: absolute;
     left: 0;
