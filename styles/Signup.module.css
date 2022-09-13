@@ -1,3 +1,4 @@
 .bgImages{
     background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg) -25vw 0 no-repeat, #212429;
+    margin-bottom: -107.5px;
 }
