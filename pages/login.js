@@ -1,9 +1,12 @@
+import Login from '../components/Login'
+import Styles from '../styles/SignIn.module.css'
+
 
 const login = ({children}) => {
   return (
-    <>
-      <div>login</div>
-    </>
+      <div className={Styles.baseImage}>
+        <Login />
+      </div>
   )
 }
 

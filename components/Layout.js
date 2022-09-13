@@ -10,39 +10,37 @@ import Link from 'next/link'
 
 const Layout = ({children}) => {
 
-const [gamesInfo, setGamesInfo] = useRecoilState(gamesState)
-const [carouselInfo, setCarouselInfo] = useRecoilState(carouselState)
-const [systemMinInfo, setSystemMinInfo] = useRecoilState(systemMinState)
-const [newsInfo, setNewsInfo] = useRecoilState(newsState)
-const [systemReqInfo, setSystemReqInfo] = useRecoilState(systemReqState)
+  const [gamesInfo, setGamesInfo] = useRecoilState(gamesState)
+  const [carouselInfo, setCarouselInfo] = useRecoilState(carouselState)
+  const [systemMinInfo, setSystemMinInfo] = useRecoilState(systemMinState)
+  const [newsInfo, setNewsInfo] = useRecoilState(newsState)
+  const [systemReqInfo, setSystemReqInfo] = useRecoilState(systemReqState)
 
 
-useEffect(() => {
-  axios.get('/api/carousel')
-    .then(res => setCarouselInfo(res.data[0]));
+  useEffect(() => {
+    axios.get('/api/carousel')
+      .then(res => setCarouselInfo(res.data[0]));
 
-  axios.get('/api/gameInfo')
-    .then(res =>  setGamesInfo(res.data[0]));
+    axios.get('/api/gameInfo')
+      .then(res =>  setGamesInfo(res.data[0]));
 
-  axios.get('/api/min')
-    .then(res => setSystemMinInfo(res.data[0]));
+    axios.get('/api/min')
+      .then(res => setSystemMinInfo(res.data[0]));
 
-  axios.get('/api/req')
-    .then(res => setSystemReqInfo(res.data[0]));
+    axios.get('/api/req')
+      .then(res => setSystemReqInfo(res.data[0]));
 
-  axios.get('/api/news')
-    .then(res => setNewsInfo(res.data[0]));
-}, [])
+    axios.get('/api/news')
+      .then(res => setNewsInfo(res.data[0]));
+  }, [])
 
 
   return (
     <>
       <div className="bg-[#1e2837]">
         <Header />
-        <div className='min-w-[972px] bg-no-repeat bg-[top_center] bg-[url("https://cdn.cloudflare.steamstatic.com/steam/apps/990080/page_bg_generated_v6b.jpg?t=1661535551")]'>
-          {children}
-          <Footer />
-        </div>
+        {children}
+        <Footer />
       </div>
       <div className="opacity-80 hidden z-[900] fixed bg-[#000000] top-0 left-0 bottom-0 right-0 p-0 m-0 font-sans text-[12px] text-[#c6d4df]"></div>
       <div className="fixed z-[1000] max-w-[998px] max-h-[762px] left-[50px] top-[134px] block font-sans text-[#c6d4df]">
