@@ -1,9 +1,9 @@
-import React from 'react'
-
+import SingUp from '../components/SignUp'
+import style from '../styles/Signup.module.css'
 const signup = () => {
   return (
-    <div>
-      
+    <div className={style.bgImages}>
+    <SingUp />
     </div>
   )
 }
