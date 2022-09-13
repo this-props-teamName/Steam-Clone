@@ -1,4 +1,26 @@
 .bgImages{
-    background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg) -25vw 0 no-repeat, #212429;
+    background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg) -30vw 0 no-repeat, #212429;
     margin-bottom: -107.5px;
+    padding-bottom: 107px;
 }
+
+
+/* rounded-[2px] p-[1px] inline-block cursor-pointer text-[#c3e1f8]   */
+.btnBg {
+ border-radius: 2px;
+ display: inline-block;
+ cursor: pointer;
+ color: #c3e1f8;
+ padding: 3px 50px;
+ font-size: 15px;
+ line-height: 30px;
+ background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%);
+ box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+ background-position: 25%;
+ background-size: 330% 100%;
+}
+
+.btnBg:hover {
+    background: linear-gradient( to right, #78c8f3 5%, #5896ec 60%);
+}
+

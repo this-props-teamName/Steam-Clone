@@ -45,7 +45,7 @@ const SignUp = () => {
                         </label>
                         <select
                           name="country"
-                          className="w-[304px] mt-[3px] bg-[#32353C] rounded-[3px] text-[#E9E9E9] px-[6px] py-[8px] block border-none w-full font-sans font-normal"
+                          className="w-[291px] mt-[3px] bg-[#32353C] rounded-[3px] text-[#E9E9E9] px-[6px] py-[8px] block border-none w-full font-sans font-normal"
                         >
                           <option value="AF">Afghanistan</option>
                           <option value="AX">Aland Island</option>
@@ -177,9 +177,6 @@ const SignUp = () => {
                       <div className="w-[304px] h-[78px]  ">
                         <div>
                           <div className="border-solid border-[1px] border-[#525252]  bg-[#222] text-[#fff] h-[74px] w-[300px] rounded-[3px] ">
-                            {/* <div className='absolute'>
-
-                            </div> */}
                             <div className="h-[74px] w-[206px] inline-block relative ">
                               <div className="inline-block h-full">
                                 <div className="table h-full">
@@ -198,19 +195,21 @@ const SignUp = () => {
                                 </div>
                               </div>
                             </div>
-                            <div className="inline-block h-[74px] align-top w-[70px] ">
-                              <div className="mr-0 mb-0 ml-[26px] mt-[10px] w-[58px] ">
-                                <div className="bg-[length:32px] h-[32px] mx-[13px] my-0 w-[32px] bg-[url('https://www.gstatic.com/recaptcha/api2/logo_48.png')] no-repeat ">
+                            <div className=' absolute inline-table'>
+                                <div className="inline-block h-[74px] align-top w-[70px] ">
+                                <div className="mr-0 mb-0 ml-[26px] mt-[10px] w-[58px] ">
+                                    <div className="bg-[length:32px] h-[32px] mx-[13px] my-0 w-[32px] bg-[url('https://www.gstatic.com/recaptcha/api2/logo_48.png')] no-repeat ">
+                                    </div>
+                                    <div className="text-[#f5f5f5] cursor-default text-[10px] font-[400] leading-[10px] mt-[5px] text-center  ">
+                                    reCAPTCHA
+                                    </div>
                                 </div>
-                                <div className="text-[#f5f5f5] cursor-default text-[10px] font-[400] leading-[10px] mt-[5px] text-center  ">
-                                  reCAPTCHA
+                                <div className="mt-[2px] mr-[11px] mb-0 ml-0 pr-[2px] ml-[27px]  right-0  w-[75px] text-[8px] font-[400] ">
+                                    <a className="text-[#f5f5f5] inline pl-[1px] pr-[1px] pt-[2px] pb-[2px]  ">Privacy</a>
+                                    <span>-</span>
+                                    <a className="text-[#f5f5f5] inline pl-[1px] pr-[1px] pt-[2px] pb-[2px]">Terms</a>
                                 </div>
-                              </div>
-                              <div className="mt-[2px] mr-[11px] mb-0 ml-0 pr-[2px] ml-[2px]  right-0  text-[8px] font-[400] ">
-                                <a className="text-[#f5f5f5] inline pl-[1px] pr-[1px] pt-[2px] pb-[2px]  ">Privacy</a>
-                                <span>-</span>
-                                <a className="text-[#f5f5f5] inline pl-[1px] pr-[1px] pt-[2px] pb-[2px]">Terms</a>
-                              </div>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -220,15 +219,15 @@ const SignUp = () => {
                       <div className=''>
                         <label className='ml-[4px] text-[14px] text-[#b8b6b4] align-top '>
                             <input type='checkbox' name='i_agree_check' className='inline w-[18px] h-[18px] bg-[#32353C] '></input>
-                        I am 13 years of age or older and agree to the terms of the 
-                        <a className='text-[#ffffff] ' href='https://store.steampowered.com/subscriber_agreement/'>Steam Subscriber Agreement</a>
-                        and the
-                        <a className='text-[#ffffff]' href='https://store.steampowered.com/privacy_agreement/'>Valve Privacy</a>.
+                            &nbsp;I am 13 years of age or older and agree to the terms of the &nbsp;
+                        <a className='text-[#ffffff] hover:text-[#67C1F5] ' href='https://store.steampowered.com/subscriber_agreement/'>Steam Subscriber Agreement</a>
+                        &nbsp; and the &nbsp;
+                        <a className='text-[#ffffff] hover:text-[#67C1F5]' href='https://store.steampowered.com/privacy_agreement/'>Valve Privacy</a>.
                         </label>
                       </div>
                       <div className='mt-[35px]'>
-                        <button className='rounded-[2px] p-[1px] inline-block cursor-pointer text-[#c3e1f8]  '>
-                            <span className='mx-[50px] my-[3px] '>Continue</span>
+                        <button className={styles.btnBg}>
+                            <span>Continue</span>
                         </button>
                       </div>
                     </div>
