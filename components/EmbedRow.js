@@ -1,5 +1,5 @@
 import shareStyles from "../styles/EmbedRow.module.css"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 const EmbedRow = () => {
     const [shareBox, setShareBox] = useState(false);
@@ -7,7 +7,8 @@ const EmbedRow = () => {
     const [showBase, setBaseBox] = useState(false);
     const [showDeluxe, setDeluxeBox] = useState(false);
     const [showReport, setReportBox] = useState(false);
-    const [val, setVal]= useState(false)
+    const [val, setVal] = useState(false)
+
 
     function widgetSwap(val) {       
         if(val) {
@@ -122,7 +123,8 @@ const EmbedRow = () => {
                                         type= "radio"
                                         name= "w_rsubid"
                                         id="wp__326241"
-                                        value= {() => setVal(false)}                                  
+                                        // value= {() => setVal(false)}   
+                                        onChange={() => setVal(false)}                               
                                         />
                                         <label htmlFor= "wp_326241"> Hogwarts Legacy </label>
                                     </div>
@@ -131,7 +133,8 @@ const EmbedRow = () => {
                                         type= "radio"
                                         name= "w_rsubid"
                                         id="wp_757087"
-                                        value= {() => setVal(true)}
+                                        // value= {() => setVal(true)}
+                                        onChange={() => setVal(true)}
                                         />
                                         <label> Hogwarts Legacy Deluxe Edition </label>
                                     </div>
