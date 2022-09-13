@@ -126,6 +126,7 @@
 .title {
     padding: 32px 32px 0px 32px;
     display: block;
+    font-family: "Motiva Sans", Sans-serif !important;
 }
 
 .content_border {
@@ -207,7 +208,6 @@
 .btn_grey_steamui:hover {
     text-decoration: none !important;
     color: #fff;
-    background: transparent;
 }
 
 .btn_grey_steamui_span {
@@ -221,6 +221,12 @@
     transition: all 0.2s ease-out;
 }
 
+.btn_grey_steamui_span:hover {
+    text-decoration: none !important;
+    color: #fff;
+    background: rgb(120, 120, 120)
+}
+
 /* EmbedBtn=============================================================================== */
 
 .embedModal {
@@ -229,7 +235,7 @@
     max-width: 1442px;
     left: 405px;
     top: 102px;
-    font-family: "Motiva Sans", Sans-serif;
+    font-family: "Motiva Sans", Sans-serif !important;
     font-weight: normal;
     min-width: 500px;
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
@@ -246,11 +252,13 @@
 .paragraph1 {
     margin: 0 0 15px 0;
     font-size: 14px;
+    font-family: "Motiva Sans", Sans-serif !important;
 }
 
 .paragraph2 {
     margin: 0 0 3px 0;
     font-size: 14px;
+    font-family: "Motiva Sans", Sans-serif !important;
 }
 
 .w_options {
@@ -282,12 +290,15 @@
 .w_text {
     width: 100%;
     height: 80px;
-    font-size: 13px;
     line-height: 15px;
     margin: 0 0 15px 0;
     background-color: transparent;
     border: none;
     color: #8f98a0;
+}
+
+.w_text::placeholder {
+    font-size: 13px;
 }
 
 .btn_container {
@@ -312,6 +323,12 @@
     border-radius: 2px;
     display: block;
     background: transparent;
+}
+
+.btn_blue:hover {
+    text-decoration: none !important;
+    color: #fff !important;
+    background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
 /* Create Widget===============================================================================  */
@@ -436,6 +453,12 @@
     text-shadow: 1px 1px 0px rgb(0 0 0 / 30%)
 }
 
+.green_btn:hover {
+    text-decoration: none !important;
+    color: #fff;
+    background: transparent;
+}
+
 .green_btn_medium {
     padding: 0 15px;
     font-size: 15px;
@@ -458,6 +481,11 @@
     background: transparent;
 }
 
+.gray_btn:hover {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
 .gray_btn_medium {
     padding: 0 15px;
     font-size: 15px;
@@ -467,6 +495,12 @@
     background: linear-gradient( to right, #32363f 5%, #32363f 95%);
     box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
     transition: all 0.2s ease-out;
+}
+
+.gray_btn_medium:hover {
+    text-decoration: none !important;
+    color: #fff !important;
+    background: rgb(120, 120, 120)
 }
 
 .here {
