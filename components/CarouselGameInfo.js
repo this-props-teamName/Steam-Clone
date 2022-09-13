@@ -2,6 +2,7 @@ import { carouselState } from './state'
 import  { useRecoilState } from 'recoil'
 import tagStyles from "../styles/Tags.module.css"
 import React, { useState } from "react"
+import Link from 'next/link'
 
 
 
@@ -69,7 +70,7 @@ const CarouselGameInfo = () => {
 
 {/*Modal*/}
       {tags ? (
-      <div className= {tagStyles.newModal_background}>
+      <div className= {tagStyles.newModal_background} onClick={() => setTags(false)}>
         <div className= {tagStyles.newModal}>
                 <div className= {tagStyles.top_bar}></div>
                 <div>
@@ -258,12 +259,11 @@ const CarouselGameInfo = () => {
                                         <h2 className= {tagStyles.header3}>Sign In</h2>
                                         <p className= {tagStyles.paragraph}>Sign in to add your own tags to this product.</p>
                                         <p className= {tagStyles.paragraph}>
-                                            <a 
-                                            className= {tagStyles.blue_btn}
-                                            href= "#"
-                                            >
-                                            <span className= {tagStyles.blue_btn_span}>Sign In</span>
+                                          <Link href= "/login">
+                                            <a className= {tagStyles.blue_btn}>
+                                              <span className= {tagStyles.blue_btn_span}>Sign In</span>
                                             </a>
+                                          </Link>
                                         </p>
                                     </div>
                                     <div className= {tagStyles.clear}></div>

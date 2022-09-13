@@ -83,7 +83,7 @@ const Header = () => {
                 Home
               </a>
               <a
-                className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]"
+                className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff] whitespace-nowrap"
                 href="https://store.steampowered.com/login/?redir=explore%2F%3Fsnr%3D1_4_4__global-header&redir_ssl=1&snr=1_4_4__global-header">
                 Discovery Queue
               </a>

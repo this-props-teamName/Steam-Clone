@@ -62,7 +62,7 @@ const NavBar = () => {
 {/* News and Noteworthy */}
                 <div className= {navStyles.tab} onMouseEnter={() => setOnHoverNews(true)}  onMouseLeave={() => setOnHoverNews(false)}>
                   <span className= {navStyles.span}>
-                    <a className= "inline text-[#e5e5e5]">News & Noteworthy</a>
+                    <a className= "inline text-[#e5e5e5]">New & Noteworthy</a>
                     <span></span>
                   </span>
                 </div>
@@ -281,7 +281,7 @@ const NavBar = () => {
                               href= "https://store.steampowered.com/search/?term="
                               onClick = {() => "return this"}
                               >
-                                <img className= "w-[25px] h-[25px] absoulte top-[1px] right-[-1px] bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')]" src="https://store.akamai.steamstatic.com/public/images/blank.gif"/>
+                                <img className= "w-[25px] h-[25px] absoulte top-[1px] right-[-1px] bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')] hover:bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')]" src="https://store.akamai.steamstatic.com/public/images/blank.gif"/>
                               </a>
                           </div>
                       </form>
