@@ -1,5 +1,5 @@
 .newModal_background {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     display: block;
     position: fixed;
     z-index: 900;
@@ -60,9 +60,10 @@
     font-weight: 300;
     font-size: 32px;
     line-height: 36px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #ffffff;
     text-transform: uppercase;
+    font-family: "Motiva Sans", Sans-serif !important;
 }
 
 .newModal_content_border {
@@ -115,7 +116,7 @@
     letter-spacing: 0px;
     padding: 0;
     margin: 0;
-    font-family: "Motiva Sans", Sans-serif;
+    font-family: "Motiva Sans", Sans-serif !important;
     word-wrap: break-word;
     white-space: normal;
 }
@@ -206,6 +207,12 @@
     background: rgba( 103, 193, 245, 0.2 );
 }
 
+.blue_btn:hover {
+    text-decoration: none !important;
+    color: #fff !important;
+    background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
+
 .blue_btn_span {
     padding: 0 15px;
     font-size: 15px;
@@ -241,6 +248,12 @@
     background: linear-gradient( to right, #32363f 5%, #32363f 95%);
     box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
     transition: all 0.2s ease-out;
+}
+
+.btn_medium_span:hover {
+    text-decoration: none !important;
+    color: #fff !important;
+    background: rgb(120, 120, 120)
 }
 
 .clear {

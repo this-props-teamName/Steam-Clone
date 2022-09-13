@@ -104,7 +104,7 @@
     font-weight: 300;
     font-size: 32px;
     line-height: 36px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #ffffff;
     text-transform: uppercase;
     flex-shrink: 0; 
@@ -456,7 +456,6 @@
 .green_btn:hover {
     text-decoration: none !important;
     color: #fff;
-    background: transparent;
 }
 
 .green_btn_medium {
@@ -466,6 +465,10 @@
     border-radius: 2px;
     display: block;
     background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+}
+
+.green_btn_medium:hover {
+    background: #75b022;
 }
 
 .gray_btn {
@@ -506,4 +509,9 @@
 .here {
     text-decoration: none;
     color: #ffffff;
+}
+
+.here:hover {
+    text-decoration: none;
+    color: #66c0f4;
 }

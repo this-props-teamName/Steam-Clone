@@ -147,7 +147,7 @@ const EmbedRow = () => {
                                     <a 
                                     onClick= {() => {widgetSwap(val)}}
                                     className = {shareStyles.btn_blue}>
-                                        <span className = {shareStyles.btn_medium}>Create widget</span>
+                                        <span className = {shareStyles.btn_medium} onClick={() => setEmbedBox(false)}>Create widget</span>
                                     </a>
                                 </div>
                             </div>
