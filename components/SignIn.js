@@ -37,7 +37,7 @@ const SignIn = () => {
                                 </div>
                                 <div className='text-[#c15755] text-[12px] font-[500] text-center'>&nbsp;</div>
                                 <a className='text-center text-[#afafaf] text-[12px] underline cursor-pointer font-serif font-normal' href='https://help.steampowered.com/wizard/HelpWithLogin?redir=https%3A%2F%2Fstore.steampowered.com%2Flogin%2F%3Fredir%3Dapp%252F990080%252FHogwarts_Legacy%252F%26redir_ssl%3D1%26snr%3D1_5_9__global-header'>
-                                    Help, I can't sign in
+                                    {"Help, I can't sign in"}
                                 </a>
                             </form>
                             <div className='ml-[24px] gap-[4px] grid shrink-1 grow-0 basis-[0%] font-normal font-serif text-[#E9E9E9] text-[12px]'>
