@@ -220,9 +220,9 @@ const SignUp = () => {
                       <div className=''>
                         <label className='ml-[4px] text-[14px] text-[#b8b6b4] align-top '>
                             <input type='checkbox' name='i_agree_check' className='inline w-[18px] h-[18px] bg-[#32353C] '></input>
-                        I am 13 years of age or older and agree to the terms of the 
+                            &nbsp;I am 13 years of age or older and agree to the terms of the &nbsp;
                         <a className='text-[#ffffff] ' href='https://store.steampowered.com/subscriber_agreement/'>Steam Subscriber Agreement</a>
-                        and the
+                        &nbsp; and the &nbsp;
                         <a className='text-[#ffffff]' href='https://store.steampowered.com/privacy_agreement/'>Valve Privacy</a>.
                         </label>
                       </div>
