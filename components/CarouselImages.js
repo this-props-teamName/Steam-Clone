@@ -91,7 +91,9 @@ const CarouselImages = () => {
     }
   }
 
-  console.log(currentSlide)
+
+
+  // console.log(currentSlide)
 
 
   if(carouselInfo.large_img_url){
@@ -105,7 +107,8 @@ const CarouselImages = () => {
             {/* large images of the carousel */}
             <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
               <div className="flex h-[100%] flex-col justify-center">
-                <a className="text-[#67c1f5]" onClick={() => setImages(carouselInfo.huge_img_url[counter])}>
+                <a className="text-[#67c1f5]" onClick={() => {setImages(carouselInfo.huge_img_url[counter]);
+                setCurrentSlide(counter)}}>
                   <img src={carouselInfo.large_img_url[counter]} />
                 </a>
               </div>
