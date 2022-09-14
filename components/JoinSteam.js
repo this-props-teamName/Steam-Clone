@@ -11,7 +11,9 @@ const JoinSteam = () => {
                 Learn More
             </a>
         </div>
-        <img alt='computer icon image' className="flex-1 flex flex-col justify-center items-center max-w-[200px] w-[320px]" src="https://store.cloudflare.steamstatic.com/public/shared/images/login/join_pc.png?v=1"></img>
+        <picture>
+            <img alt='computer icon image' className="flex-1 flex flex-col justify-center items-center max-w-[200px] w-[320px]" src="https://store.cloudflare.steamstatic.com/public/shared/images/login/join_pc.png?v=1"></img>
+        </picture>
         <div className="flex-1 flex flex-col justify-center items-center text-center max-w-[200px] mt-[20px] text-[#E9E9E9] font-serif font-normal text-[12px]">
             <Link href='/signup'>
             <a className="mt-[20px] mr-0 mb-[10px] ml-0 block text-center rounded-[2px] p-[1px] cursor-pointer text-[#fff] bg-transparent font-normal font-serif text-[12px]">

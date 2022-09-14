@@ -81,11 +81,13 @@ const GameEvents = () => {
               {/* this is Before Hover  */}
               <div className={Backing.leftDiv}>
                 <div className="w-full h-auto relative overflow-hidden">
-                  <img
-                    className={Backing.rightImg}
-                    alt='event image'
-                    src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/42155078/db8eef3034e5b0fb77b5528ee7eafa812ff830f0_400x225.jpg"
-                  />
+                  <picture>
+                    <img
+                      className={Backing.rightImg}
+                      alt='event image'
+                      src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/42155078/db8eef3034e5b0fb77b5528ee7eafa812ff830f0_400x225.jpg"
+                    />
+                  </picture>
                 </div>
                 <div className={Backing.other}>
                   <div className="text-[15px] leading-[19px] text-[#fff] max-h-[2.4375rem] mb-[4px] overflow-hidden">
