@@ -8,18 +8,16 @@ const Header = () => {
   const [onHoverComm, setOnHoverComm] = useState(false);
   const [onLangMenu, setOnLangMenu] = useState(false);
 
-
   function storeClass() {
- return `overflow-none ${onHoverStore  ? 'bg-[#171a21] max-w-[132px] pt-[5px] pb-[10px] pl-[15px] pr-[15px] text-left  ' : 'hidden'}`
+    return `overflow-none ${onHoverStore  ? 'bg-[#171a21] max-w-[132px] pt-[5px] pb-[10px] pl-[15px] pr-[15px] text-left  ' : 'hidden'}`
   }
- function commClass() {
-  return `overflow-none ${onHoverComm  ? ' absolute z-[1500] opacity-1 left-[59px] top-[64px] bg-[#171a21] max-w-[132px] p-[10px]  text-left' : 'hidden'}`
+  function commClass() {
+    return `overflow-none ${onHoverComm  ? ' absolute z-[1500] opacity-1 left-[59px] top-[64px] bg-[#171a21] max-w-[132px] p-[10px]  text-left' : 'hidden'}`
   }
   function langMenu() {
     return `${onLangMenu ? 'block top-[25px] -left-[72.3203px] opacity-100 align-top z-200 absolute shadow-[0_0_12px_#000000]' : 'hidden'}`
   }
 
-  
   return (
     <header className="bg-[#171a21] bg-center-top min-w-[940px] font-sans font-normal text-[14px] px-[16px]">
       {/* this div hold all the the stuff in the header */}
@@ -29,6 +27,7 @@ const Header = () => {
             <a href="https://store.steampowered.com/">
               <img
                 className="h-[44px] w-[176px]cursor-pointer"
+                alt='header steam icon'
                 src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
               />
             </a>
@@ -70,8 +69,6 @@ const Header = () => {
           </a>
           {/* -----Hidden hover for Store */}
           {/* the followig is the style of hover when appearinng */}
-          {/* <div className=" absolute z-[1500] opacity-1 left-[1px] top-[64px] bg-[#171a21] max-w-[132px]
-                  p-[10px] shadow-[3px_3px_5px_-3px_#000] text-left " ></div> */}
           <div
             className={storeClass()}
             onMouseEnter={() => setOnHoverStore(true)}
@@ -107,15 +104,9 @@ const Header = () => {
                 href="https://store.steampowered.com/stats/" >
                 Stats
               </a>
-              {/* <a className="block uppercase text-[11px] text-[#b8b6b4] pr-[10px] py-[4px] no-underline hover:text-[#fff]">
-                ABOUT
-              </a> */}
             </div>
           </div>
           {/* --------Hidden hover for Community---- */}
-          {/* the followig is the style of hover when appearinng */}
-          {/* <div className=" absolute z-[1500] opacity-1 left-[59px] top-[64px] bg-[#171a21] max-w-[132px]
-                  p-[10px] shadow-[3px_3px_5px_-3px_#000] text-left " ></div> */}
           <div
             className={commClass()}
             onMouseEnter={() => setOnHoverComm(true)}
@@ -147,9 +138,6 @@ const Header = () => {
             </a>
           </div>
           {/* --------Hidden hover for USERNAME ---- */}
-          {/* the followig is the style of hover when appearinng */}
-          {/* <div className=" absolute z-[1500] opacity-1 left-[159px] top-[64px] bg-[#171a21] max-w-[132px]
-                  p-[10px] shadow-[3px_3px_5px_-3px_#000] text-left " ></div> */}
           <div className="hidden ">
             <a className="block no-underline uppercase text-[11px] text-[#b8b6b4] pr-[10px] ">
               Activity
@@ -350,10 +338,13 @@ const Header = () => {
             </div>
             <div className=" hidden inline-block align-top leading-[21px] ">
               <div className=" hidden inline-block leading-[24px] my-0 mr-[3px] ml-[8px] px-[8px] py-[0px] bg-[#262625] hover:bg-[#575451]">
-                <img
-                  className=" hidden w-[12px] h-[10px] inline "
-                  src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_menu_notifications.png "
-                />
+                <picture>
+                  <img
+                    className=" hidden w-[12px] h-[10px] inline"
+                    alt='mail icon'
+                    src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_menu_notifications.png "
+                  />
+                </picture>  
               </div>
             </div>
             <span className=" hidden inline-block pl-[4px] leading-[25px] mr-[5px] pr-[18px] bg-[url('https://store.akamai.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png')] bg-no-repeat bg-[center_right] text-[12px] hover:text-[#FFFFFF]">
@@ -362,10 +353,13 @@ const Header = () => {
           </div>
           {/* this is the second div that deals with the just the image logo */}
           <div className=" hidden inline-block relative ml-[3px] bg-[#555555]  h-[34px] w-[34px] p-[1px]">
-            <img
-              className="p-[1px] leading-[21px]"
-              src="https://avatars.akamai.steamstatic.com/c34d6c555878a155a93565791de54510e36154bd.jpg"
-            />
+            <picture>
+              <img
+                className="p-[1px] leading-[21px]"
+                alt='user profil icon'
+                src="https://avatars.akamai.steamstatic.com/c34d6c555878a155a93565791de54510e36154bd.jpg"
+              />
+            </picture>
           </div>
         </div>
       </div>
