@@ -13,7 +13,9 @@ const Ratings = () => {
           <div className="text-[#c6d4df] text-[12px] block">
             <div className="flex">
               <div className="mr-[10px] block">
-                <img src={gamesInfo.rating}/>
+                <picture>
+                  <img alt='' src={gamesInfo.rating}/>
+                </picture>
               </div>
               <div></div>
             </div>

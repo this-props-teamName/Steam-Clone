@@ -39,7 +39,6 @@ const NavBar = () => {
 {/*Your Store */}
                 <div className= {navStyles.tab} onMouseEnter={() => setOnHoverStore(true)}  onMouseLeave={() => setOnHoverStore(false)} >
                   <span className= {navStyles.span}>
-                    {/* <img className= {navStyles.profile_img} src="https://avatars.akamai.steamstatic.com/bb3ef3a7103423dbfe4947ad72c6a43a84b53fa9.jpg"/> */}
                     <a className= "inline text-[#e5e5e5">Your Store</a>
                     <span></span>
                   </span>
@@ -281,7 +280,9 @@ const NavBar = () => {
                               href= "https://store.steampowered.com/search/?term="
                               onClick = {() => "return this"}
                               >
-                                <img className= "w-[25px] h-[25px] absoulte top-[1px] right-[-1px] bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')] hover:bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')]" src="https://store.akamai.steamstatic.com/public/images/blank.gif"/>
+                              <picture>
+                                <img alt='images' className= "w-[25px] h-[25px] absoulte top-[1px] right-[-1px] bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')] hover:bg-[url('https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png')]" src="https://store.akamai.steamstatic.com/public/images/blank.gif"/>
+                              </picture>  
                               </a>
                           </div>
                       </form>

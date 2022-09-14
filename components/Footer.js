@@ -11,12 +11,16 @@ const Footer = () => {
             <div className="h-[8px] border-t-[1px] border-solid border-[#363c44]"></div>
             {/* steamLogo */}
             <div className="float-right pt-[2px]">
-              <img className="border-0" src="https://store.akamai.steamstatic.com/public/images/v6/logo_steam_footer.png" alt="Valve Software"/>
+              <picture>
+                <img className="border-0" src="https://store.akamai.steamstatic.com/public/images/v6/logo_steam_footer.png" alt="Valve Software"/>
+              </picture>
             </div>
             {/* Valve Logo */}
             <div className="float-left pt-[2px]">
               <a href="http://www.valvesoftware.com" target="_blank" rel="noreferrer">
-                <img className="border-0 h-[25px] w-auto" src="https://store.akamai.steamstatic.com/public/images/footerLogo_valve_new.png" alt="Valve Software" />
+                <picture>
+                  <img className="border-0 h-[25px] w-auto" src="https://store.akamai.steamstatic.com/public/images/footerLogo_valve_new.png" alt="Valve Software" />
+                </picture>
               </a>
             </div>
             {/* Footer Text */}
@@ -56,14 +60,17 @@ const Footer = () => {
               &nbsp; | &nbsp;
               <a className="text-[#C6D4DF] hover:text-[#fff]" href="https://store.steampowered.com/digitalgiftcards/?snr=1_44_44_" target="_blank" rel="noreferrer">Gift Cards</a>
               &nbsp; | &nbsp;
-              {/* slight differences but we can fix it later */}
                 <a className="text-[#C6D4DF] flex flex-nowrap" href="https://steamcommunity.com/linkfilter/?url=http://www.facebook.com/Steam" target="_blank" rel="noreferrer">
-                  <img className="align-bottom border-none m-0 p-0 h-[16px] w-[16px]" src="https://store.akamai.steamstatic.com/public/images/ico/ico_facebook.gif" />
+                  <picture>
+                    <img className="align-bottom border-none m-0 p-0 h-[16px] w-[16px]" alt='small social media icon' src="https://store.akamai.steamstatic.com/public/images/ico/ico_facebook.gif" />
+                  </picture>
                    Steam
                 </a>
                 &nbsp; | &nbsp;
                 <a className="text-[#C6D4DF] flex flex-nowrap" href="http://twitter.com/steam" target="_blank" rel="noreferrer">
-                  <img className="align-bottom border-none m-0 p-0 h-[16px] w-[16px]" src="https://store.akamai.steamstatic.com/public/images/ico/ico_twitter.gif" />
+                  <picture>
+                    <img className="align-bottom border-none m-0 p-0 h-[16px] w-[16px]" alt='small social media icon' src="https://store.akamai.steamstatic.com/public/images/ico/ico_twitter.gif" />
+                  </picture>
                   @steam
                 </a>
             </div>

@@ -177,9 +177,6 @@ const SignUp = () => {
                       <div className="w-[304px] h-[78px]  ">
                         <div>
                           <div className="border-solid border-[1px] border-[#525252]  bg-[#222] text-[#fff] h-[74px] w-[300px] rounded-[3px] ">
-                            {/* <div className='absolute'>
-
-                            </div> */}
                             <div className="h-[74px] w-[206px] inline-block relative ">
                               <div className="inline-block h-full">
                                 <div className="table h-full">
