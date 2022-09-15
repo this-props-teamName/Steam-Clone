@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import LangStyle from '../styles/header.module.css'
 import Link from 'next/link'; 
+import { useUser } from '@auth0/nextjs-auth0'
 
 
 const Header = () => {
   const [onHoverStore, setOnHoverStore] = useState(false); 
   const [onHoverComm, setOnHoverComm] = useState(false);
   const [onLangMenu, setOnLangMenu] = useState(false);
+
+  const { user, isLoading, error } = useUser()
 
   function storeClass() {
     return `overflow-none ${onHoverStore  ? 'bg-[#171a21] max-w-[132px] pt-[5px] pb-[10px] pl-[15px] pr-[15px] text-left  ' : 'hidden'}`
@@ -175,11 +178,18 @@ const Header = () => {
                 Install Steam
               </a>
             </div>
-            <Link href="/login" passHref>
-              <a className="py-[0px] px-[4px] no-underline cursor-pointer leading-[24px] hover:text-[#FFFFFF]">
-                login
-              </a>
-            </Link>
+              {isLoading ? ( 
+                <p>Loading..</p> 
+                ) : (
+                <div>{user ? (
+                  <>
+                    <p>{user.name}</p>
+                    <a href= "/api/auth/logout">Logout</a>
+                  </>
+                ) : ( 
+                    <a href="/api/auth/login" className="py-[0px] px-[4px] no-underline cursor-pointer leading-[24px] hover:text-[#FFFFFF]"> Login </a>)}
+                </div>
+              )}
             &nbsp; |&nbsp;
             <button
               className=" inline-block pl-[4px] leading-[25px] mr-[5px] pr-[18px] bg-[url('https://store.akamai.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png')] bg-no-repeat bg-[center_right] text-[12px] hover:text-[#FFFFFF]"
