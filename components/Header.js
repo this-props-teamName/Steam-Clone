@@ -184,10 +184,10 @@ const Header = () => {
                 <div>{user ? (
                   <>
                     <p>{user.name}</p>
-                    <a href= "/api/auth/logout">Logout</a>
+                    <Link href= "/api/auth/logout">Logout</Link>
                   </>
                 ) : ( 
-                    <a href="/api/auth/login" className="py-[0px] px-[4px] no-underline cursor-pointer leading-[24px] hover:text-[#FFFFFF]"> Login </a>)}
+                    <Link href="/api/auth/login" className="py-[0px] px-[4px] no-underline cursor-pointer leading-[24px] hover:text-[#FFFFFF]"> Login </Link>)}
                 </div>
               )}
             &nbsp; |&nbsp;
