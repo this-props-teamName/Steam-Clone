@@ -26,23 +26,24 @@ const Header = () => {
       <div className="relative h-[104px] w-[940px] mx-auto my-0 z-[402] ">
         <div className="float-left pt-[30px] mr-[40px] ">
           <Link href="/" passHref>
-            <a href="https://store.steampowered.com/">
+            <picture>
               <img
+              alt='#'
                 className="h-[44px] w-[176px]cursor-pointer"
                 src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
               />
-            </a>
+            </picture>
           </Link>
         </div>
         {/* The second div here is for the options layed out next to the logo */}
         <div className="absolute left-[200px]">
-          <a
+          <a href='#'
             className="block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]"
             onMouseEnter={() => setOnHoverStore(true)}
             onMouseLeave={() => setOnHoverStore(false)}>
             Store
           </a>
-          <a
+          <a 
             className="block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4] "
             href="https://steamcommunity.com/"
             onMouseEnter={() => setOnHoverComm(true)}
@@ -55,10 +56,10 @@ const Header = () => {
             About
           </a>
           {/*-------this is the hidden becuase its for Log IN  */}
-          <a className="hidden block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]">
+          <a href='#' className="hidden block hover:text-[#FFFFFF] relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]">
             UserName Here
           </a>
-          <a className="hidden block hover:text-[#FFFFFF]  relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]">
+          <a href='#' className="hidden block hover:text-[#FFFFFF]  relative pt-[45px] pb-[7px] pl-[7px] pr-[7px] float-left text-[14px] leading-[16px] uppercase text-[#b8b6b4]">
             Chat
           </a>
           {/* just the two above are hidden */}
@@ -350,10 +351,13 @@ const Header = () => {
             </div>
             <div className=" hidden inline-block align-top leading-[21px] ">
               <div className=" hidden inline-block leading-[24px] my-0 mr-[3px] ml-[8px] px-[8px] py-[0px] bg-[#262625] hover:bg-[#575451]">
+                <picture>
                 <img
+                alt='#'
                   className=" hidden w-[12px] h-[10px] inline "
                   src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_menu_notifications.png "
                 />
+                </picture>
               </div>
             </div>
             <span className=" hidden inline-block pl-[4px] leading-[25px] mr-[5px] pr-[18px] bg-[url('https://store.akamai.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png')] bg-no-repeat bg-[center_right] text-[12px] hover:text-[#FFFFFF]">
@@ -362,10 +366,13 @@ const Header = () => {
           </div>
           {/* this is the second div that deals with the just the image logo */}
           <div className=" hidden inline-block relative ml-[3px] bg-[#555555]  h-[34px] w-[34px] p-[1px]">
+            <picture>
             <img
+              alt='img'
               className="p-[1px] leading-[21px]"
               src="https://avatars.akamai.steamstatic.com/c34d6c555878a155a93565791de54510e36154bd.jpg"
             />
+            </picture>
           </div>
         </div>
       </div>

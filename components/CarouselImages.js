@@ -8,9 +8,9 @@ import imageStyles from "../styles/imageModal.module.css"
 
 const CarouselImages = () => {
   const [carouselInfo, setCarouselInfo] = useRecoilState(carouselState);
-  const [frame, setFrame] = useState(0)
-  const [counter, setCounter] = useState(0)
-  const [timer, setTimer] = useState(0)
+  const [frame, setFrame] = useState(0) // how many pixel the white box has to move to the right, increments 120px each time 
+  const [counter, setCounter] = useState(0) // is a number, which represnt the info in our database/ the images 
+  const [timer, setTimer] = useState(0) // set interval produces a number 
   const [val, setVal] =useState(0)
   const [images, setImages] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -20,7 +20,7 @@ const CarouselImages = () => {
   },[])
 
   function interval(x, y){
-    setTimer(setInterval(() => {
+    setTimer(setInterval(() => { // set intervel allows you to move through the images// js thing setInterval // setInterval produces a a numneber  
       if(x < 480){
         setFrame(x += 120)
         setCounter(y += 1)
@@ -32,7 +32,7 @@ const CarouselImages = () => {
   }
   
   let clicked = (x, y) => {
-    clearInterval(timer)
+    clearInterval(timer) // clearInterval is a js thing 
     setFrame(x)
     setCounter(y)
     interval(x,y)
@@ -47,12 +47,12 @@ const CarouselImages = () => {
     setVal(event.target.value * 0.02)
   }
 
-  function incrementLoc(x, y){
+  function incrementLoc(x, y){ // x frame, y counter 
     if(x<480){
       clearInterval(timer)
       setFrame(x += 120);
       setCounter(y += 1);
-      interval(x, y);
+      interval(x, y); // you need this to continue where you clicked, almost like restatring at he current clicked location 
     }else{
       clearInterval(timer)
       setFrame(x -=480);
@@ -93,7 +93,7 @@ const CarouselImages = () => {
 
 
 
-  // console.log(currentSlide)
+  
 
 
   if(carouselInfo.large_img_url){
@@ -102,46 +102,17 @@ const CarouselImages = () => {
         <div className = "overflow-hidden relative mr-[16px]">
           <div className ="bg-black overflow-hidden relative" >
             <div>
-              <img src='https://store.cloudflare.steamstatic.com/public/images/game/game_highlight_image_spacer.gif' />
+              <img alt='image' src='https://store.cloudflare.steamstatic.com/public/images/game/game_highlight_image_spacer.gif' />
             </div>
             {/* large images of the carousel */}
             <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
               <div className="flex h-[100%] flex-col justify-center">
                 <a className="text-[#67c1f5]" onClick={() => {setImages(carouselInfo.huge_img_url[counter]);
                 setCurrentSlide(counter)}}>
-                  <img src={carouselInfo.large_img_url[counter]} />
+                  <img alt='largeImg' src={carouselInfo.large_img_url[counter]} />
                 </a>
               </div>
             </div>
-            {/* <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
-              <div className="flex h-[100%] flex-col justify-center">
-                <a className="text-[#67c1f5]" href="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/ss_df93b5e8a183f7232d68be94ae78920a90de1443.1920x1080.jpg?t=1661535551">
-                  <img src={carouselInfo.large_img_url[counter]} />
-                </a>
-              </div>
-            </div>
-            <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
-              <div className="flex h-[100%] flex-col justify-center">
-                <a className="text-[#67c1f5]" href="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/ss_94058497bf0f8fabdde17ee8d59bece609a60663.1920x1080.jpg?t=1661535551">
-                  <img src={carouselInfo.large_img_url[counter]} />
-                </a>
-              </div>
-            </div>
-            <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
-              <div className="flex h-[100%] flex-col justify-center">
-                <a className="text-[#67c1f5]" href="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/ss_8e08976236d29b1897769257ac3c64e9264792a5.1920x1080.jpg?t=1661535551">
-                  <img src={carouselInfo.large_img_url[counter]} />
-                </a>
-              </div>
-            </div>
-            <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
-              <div className="flex h-[100%] flex-col justify-center">
-                <a className="text-[#67c1f5]" href="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/ss_d4930d675af053dc1e61a876a34fc003e85e261f.1920x1080.jpg?t=1661535551">
-                  <img src={carouselInfo.large_img_url[counter]} />
-                </a>
-              </div>
-            </div>
-            <script></script> */}
           </div>
           <div className="mt-[4px] relative h-[69px] mb-[4px] z-40">
             {/* this is what we want to move left changes make left negative */}
@@ -152,19 +123,19 @@ const CarouselImages = () => {
               </div>
               {/* small images below the main viewer of the carousel */}
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(0, 0)} >
-                <img src={carouselInfo.small_img_url[0]}/>
+                <img alt='smallImg' src={carouselInfo.small_img_url[0]}/>
               </div>
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(120, 1)}>
-                <img src={carouselInfo.small_img_url[1]} />
+                <img alt='smallImg' src={carouselInfo.small_img_url[1]} />
               </div>
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(240, 2)}>
-                <img src={carouselInfo.small_img_url[2]} />
+                <img alt='smallImg' src={carouselInfo.small_img_url[2]} />
               </div>
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(360, 3)}>
-                <img src={carouselInfo.small_img_url[3]} />
+                <img alt='smallImg' src={carouselInfo.small_img_url[3]} />
               </div>
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(480, 4)}>
-                <img src={carouselInfo.small_img_url[4]} />
+                <img alt='smallImg' src={carouselInfo.small_img_url[4]} />
               </div>
             </div>
           </div>
@@ -203,22 +174,22 @@ const CarouselImages = () => {
                               href= "#"
                               >
                               Download full-size version
-                              <img className= {imageStyles.download} src="https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif"/> 
+                              <img alt='image' className= {imageStyles.download} src="https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif"/> 
                           </a>
                       </div>
                       <div>
-                          <img 
+                          <img alt='image'
                           className={imageStyles.screenshot_img}
                         //   style ="opacity: 1; max-width: 1420px; max-height:520px"
                           src= {carouselInfo.huge_img_url[currentSlide]}/>
                           
-                          <img 
+                          <img alt='image'
                           className={imageStyles.screenshot_img2}
                         //   style="display:none;"
                           src= {carouselInfo.huge_img_url[1]}
                           />
 
-                            <img 
+                            <img alt='image'
                           className={imageStyles.screenshot_img2}
                         //   style="display:none;"
                           src= {carouselInfo.huge_img_url[2]}

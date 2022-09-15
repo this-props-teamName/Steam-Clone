@@ -25,10 +25,14 @@ const GamePageAutoCollapseDeluxe = () => {
          <div className="leading-[1.5rem] text-[14px] mt-[30px] overflow-hidden font-sans font-normal ">
            <h2 className="text-[14px] uppercase text-[#fff] mt-[0px] mx-[0px] mb-[10px] tracking-[0.03rem] font-normal pt-2px  ">
              Pre-Purchase Offer
-             <img
+             <picture>
+             <img alt="img deluxe"
+              // width={'616px'}
+              // height={'243px'}
                className="leading-[26px] bg-no-repeat bg-left-bottom "
                src="https://store.cloudflare.steamstatic.com/public/images/v6/maincol_gradient_rule.png"
              />
+             </picture>
            </h2>
            <p className="mb-[8px] block ">
              {gamesInfo.prepur_included}
@@ -39,7 +43,9 @@ const GamePageAutoCollapseDeluxe = () => {
              Digital Deluxe Edition
            </h2>
            <p className="mb-[8px] ">
-             <img src={gamesInfo.dd_img} />
+            <picture>
+             <img alt='imgDeluxe' src={gamesInfo.dd_img} />
+            </picture>
              <br />
              The {carouselInfo.dd_title} Include: <br />
              -{gamesInfo.recent_events_img[0] }<br />

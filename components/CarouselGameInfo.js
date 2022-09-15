@@ -17,7 +17,9 @@ const CarouselGameInfo = () => {
           <div className='mb-[7px]'>
             {/* right column picture
                 need to use database for the image below */}
-            <img className='w-[324px] h-[151px]' src={carouselInfo.title_img_url} />
+            <picture>
+            <img alt='title Image' className='w-[324px] h-[151px]' src={carouselInfo.title_img_url} />
+            </picture>
           </div>
           {/* right column description
               need to use database for game description text below */}
