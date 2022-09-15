@@ -5,14 +5,8 @@ import { carouselState } from './state'
 import { useRecoilState } from 'recoil'
 
 const Details = () => {
-    // const [details, getDetails] = useState();
     
-    // useEffect(() => {
-    //     axios.get('http://localhost:4000/api/carousel')
-    //     .then(res => getDetails(res.data[0]));
-    // }, []);
     const [carouselInfo, setCarouselInfo] = useRecoilState(carouselState)
-
 
     if (carouselInfo.length !== 0) {
         return (
@@ -48,7 +42,9 @@ const Details = () => {
                         <div className="pt-[14px] font-[300]">
                             <a className="min-h-[17px] pt-[4px] pl-[8px] pb-[4px] leading-[17px] bg-blue-rgba-2 text-[#67c1f5] rounded-[1px] flex mb-[2px] font-serif hover:text-[#fff] hover:bg-[#67c1f5]" href="https://steamcommunity.com/linkfilter/?url=https://www.hogwartslegacy.com/" target="blank" rel="noreferrer noopener">
                             Visit the website &nbsp;
-                            <img src="https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif" className="max-h-[12px] max-h-[8px] pr-[4px] pb-0 border-none"/>
+                            <picture>
+                            <img alt='little icon' src="https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif" className="max-h-[12px] max-h-[8px] pr-[4px] pb-0 border-none"/>
+                            </picture>
                             </a>
                             <a className="min-h-[17px] pt-[4px] pl-[8px] pb-[4px] leading-[17px] bg-blue-rgba-2 text-[#67c1f5] rounded-[1px] flex mb-[2px] font-serif hover:text-[#fff] hover:bg-[#67c1f5]" href="https://store.steampowered.com/newshub/?appids=990080&snr=1_5_9__408" target="blank" rel="noreferrer noopener">
                             View Update History

@@ -26,12 +26,20 @@ const GamePageAutoCollapseDeluxe = () => {
            <h2 className="text-[14px] uppercase text-[#fff] mt-[0px] mx-[0px] mb-[10px] tracking-[0.03rem] font-normal pt-2px  ">
              Pre-Purchase Offer
              <picture>
+<<<<<<< HEAD
              <img alt="img deluxe"
               // width={'616px'}
               // height={'243px'}
                className="leading-[26px] bg-no-repeat bg-left-bottom "
                src="https://store.cloudflare.steamstatic.com/public/images/v6/maincol_gradient_rule.png"
              />
+=======
+              <img
+                className="leading-[26px] bg-no-repeat bg-left-bottom"
+                alt='gradient line'
+                src="https://store.cloudflare.steamstatic.com/public/images/v6/maincol_gradient_rule.png"
+              />
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
              </picture>
            </h2>
            <p className="mb-[8px] block ">
@@ -43,8 +51,13 @@ const GamePageAutoCollapseDeluxe = () => {
              Digital Deluxe Edition
            </h2>
            <p className="mb-[8px] ">
+<<<<<<< HEAD
             <picture>
              <img alt='imgDeluxe' src={gamesInfo.dd_img} />
+=======
+            <picture> 
+              <img alt='deluxe title img' src={gamesInfo.dd_img} />
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
             </picture>
              <br />
              The {carouselInfo.dd_title} Include: <br />
@@ -60,7 +73,6 @@ const GamePageAutoCollapseDeluxe = () => {
           <div className='relative h-[55px]' style={{background:'linear-gradient(0deg, #000000e8, transparent)'}}></div>
            <div className="absolute right-0 bottom-0 h-[20px] leading-[20px] cursor-pointer text-[#537ca6] text-[10px] pr-[12px] hover:text-[#fff] " onClick={()=> setReadMoreClick(true)}>
              READ MORE
-             {/* need to add a gradient here but cant add since image is not http */}
            </div>
            {/* need to add a arrow down */}
          </div>

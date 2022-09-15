@@ -5,8 +5,6 @@ const GameEvents = () => {
   const [onHoverLeft, setOnHoverLeft] = useState(false)
   const [onHoverRight, setOnHoverRight] = useState(false)
   
-
-
   return (
     <div>
       <div className="mt-[30px] mr-0 mb-0 ml-0 block p-0 block">
@@ -14,7 +12,8 @@ const GameEvents = () => {
           <h2 className="font-sans text-[#fff] text-[14px] mx-0 mt-0 mb-[10px] uppercase font-normal pt-[2px] ">
             Recent Events & Announcements
             <img
-              className="leading-[26px] bg-no-repeat bg-left-bottom "
+              className="leading-[26px] bg-no-repeat bg-left-bottom"
+              alt='gradient line'
               src="https://store.cloudflare.steamstatic.com/public/images/v6/maincol_gradient_rule.png"
             />
           </h2>
@@ -29,8 +28,6 @@ const GameEvents = () => {
           <div className=" font-sans flex mb-[5px] mt-[5px] overflow-x-auto ">
             <a
               className={Backing.left}
-              // onMouseEnter={() => setOnHoverLeft(true)}
-              // onMouseLeave={() => setOnHoverLeft(false)}
               href="https://store.steampowered.com/news/app/990080/view/3333248206672092333"
               onMouseEnter={() => setOnHoverLeft(true)} onMouseLeave={() => setOnHoverLeft(false)}>
                 {onHoverLeft ? (
@@ -45,17 +42,13 @@ const GameEvents = () => {
               </div>
                 ) : ('')
                 }
-              {/* <div className='bg-[url("https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/42155078/6e9647679e2a01001e1a61da7b7373bc086350f6_400x225.jpg")] w-full h-full bg-cover absolute opacity-40 p-0 m-0 block '> */}
-              {/* </div> */}
-              {/* this happens whe No onhover */}
               <div
                 className={Backing.leftDiv}
-                // onMouseEnter={() => setOnHoverLeft(true)}
-                // onMouseLeave={() => setOnHoverLeft(false)}
               >
                 <div className=" w-full h-auto relative overflow-hidden">
                   <img
-                    className=" w-full h-auto relative left-0 top-0 block  "
+                    className=" w-full h-auto relative left-0 top-0 block"
+                    alt="event image"
                     src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/42155078/6e9647679e2a01001e1a61da7b7373bc086350f6_400x225.jpg"
                   />
                 </div>
@@ -90,6 +83,7 @@ const GameEvents = () => {
                 <div className="w-full h-auto relative overflow-hidden">
                   <img
                     className={Backing.rightImg}
+                    alt='event image'
                     src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/42155078/db8eef3034e5b0fb77b5528ee7eafa812ff830f0_400x225.jpg"
                   />
                 </div>

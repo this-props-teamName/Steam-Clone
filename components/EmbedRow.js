@@ -9,7 +9,6 @@ const EmbedRow = () => {
     const [showReport, setReportBox] = useState(false);
     const [val, setVal] = useState(false)
 
-
     function widgetSwap(val) {       
         if(val) {
             setDeluxeBox(true)
@@ -66,13 +65,19 @@ const EmbedRow = () => {
                                     <div className ={shareStyles.shareModal}>
                                         <div>
                                             <a href = "https://store.steampowered.com/share/facebook/app/990080" className = {shareStyles.share}>
-                                                <img src = "https://store.akamai.steamstatic.com/public/images/social/facebook_large.png" className = {shareStyles.share_img}/>
+                                                <picture>
+                                                    <img alt='social media icons' src = "https://store.akamai.steamstatic.com/public/images/social/facebook_large.png" className = {shareStyles.share_img}/>
+                                                </picture>
                                             </a>
                                             <a href = "https://store.steampowered.com/share/twitter/app/990080" className = {shareStyles.share}>
-                                                <img src = "https://store.akamai.steamstatic.com/public/images/social/twitter_large.png" className = {shareStyles.share_img}/>
+                                                <picture>
+                                                    <img alt='social media icons' src = "https://store.akamai.steamstatic.com/public/images/social/twitter_large.png" className = {shareStyles.share_img}/>
+                                                </picture>
                                             </a>
                                             <a href = "https://store.steampowered.com/share/reddit/app/990080" className = {shareStyles.share}>
-                                                <img src = "https://store.akamai.steamstatic.com/public/images/social/reddit_large.png" className = {shareStyles.share_img}/>
+                                                <picture>
+                                                    <img alt='social media icons' src = "https://store.akamai.steamstatic.com/public/images/social/reddit_large.png" className = {shareStyles.share_img}/>
+                                                </picture>
                                             </a>
                                             <div className= {shareStyles.share_dialog}>
                                                 <label htmlFor= "linkShareValue" hidden> {"Link to the game's store page"}</label>
@@ -123,7 +128,6 @@ const EmbedRow = () => {
                                         type= "radio"
                                         name= "w_rsubid"
                                         id="wp__326241"
-                                        // value= {() => setVal(false)}   
                                         onChange={() => setVal(false)}                               
                                         />
                                         <label htmlFor= "wp_326241"> Hogwarts Legacy </label>
@@ -133,7 +137,6 @@ const EmbedRow = () => {
                                         type= "radio"
                                         name= "w_rsubid"
                                         id="wp_757087"
-                                        // value= {() => setVal(true)}
                                         onChange={() => setVal(true)}
                                         />
                                         <label> Hogwarts Legacy Deluxe Edition </label>

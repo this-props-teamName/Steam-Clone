@@ -12,9 +12,6 @@ let currDate = new Date();
 let reDate = new Date(carouselInfo.release_date); 
 let differentTime = reDate.getTime() - currDate.getTime(); 
 
-// let currMonth = currDate.getMonth() + 1; 
-// let reMonth = reDate.getMonth() + 1
-
     return (
       <div className="text-[14px] mt-[16px]">
         <div className=" text-[#d5d6d8] mb-[28px] shadow-[2px_2px_15px_rgba(0,0,0,0.4)] rounded-[4px] text-[13px] font-sans font-[300] ">
@@ -30,10 +27,13 @@ let differentTime = reDate.getTime() - currDate.getTime();
         <div className="mb-[28px]  ">
           <div className={styles.gradientPurchase}>
             <div className="float-right">
-              <img
-                className="inline-block w-[20px] h-[20px] bg-no-repeat  "
-                src="https://store.akamai.steamstatic.com/public/images/v6/icon_platform_win.png?v=3"
-              />
+              <picture>
+                <img
+                  className="inline-block w-[20px] h-[20px] bg-no-repeat"
+                  alt='windows icon'
+                  src="https://store.akamai.steamstatic.com/public/images/v6/icon_platform_win.png?v=3"
+                />
+              </picture>
             </div>
             <h1 className="text-[21px] font-sans text-[#ffffff] font-normal block">
               Pre-Purchase {carouselInfo.title}
@@ -57,10 +57,13 @@ let differentTime = reDate.getTime() - currDate.getTime();
         <div className="mb-[28px]  ">
           <div className={styles.gradientPurchase}>
             <div className="float-right">
-              <img
-                className="inline-block w-[20px] h-[20px] bg-no-repeat  "
-                src="https://store.akamai.steamstatic.com/public/images/v6/icon_platform_win.png?v=3"
-              />
+              <picture>
+                <img
+                  className="inline-block w-[20px] h-[20px] bg-no-repeat"
+                  alt='windows icon'
+                  src="https://store.akamai.steamstatic.com/public/images/v6/icon_platform_win.png?v=3"
+                />
+              </picture>
             </div>
             <h1 className="text-[21px] font-sans text-[#ffffff] font-normal block">
               Pre-Purchase {carouselInfo.dd_title}

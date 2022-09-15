@@ -91,25 +91,40 @@ const CarouselImages = () => {
     }
   }
 
+<<<<<<< HEAD
 
 
   
 
 
+=======
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
   if(carouselInfo.large_img_url){
   return (
       <div className="w-[616] float-left p-[0px] m-[0px] font-sans">
         <div className = "overflow-hidden relative mr-[16px]">
           <div className ="bg-black overflow-hidden relative" >
             <div>
+<<<<<<< HEAD
               <img alt='image' src='https://store.cloudflare.steamstatic.com/public/images/game/game_highlight_image_spacer.gif' />
+=======
+              <picture>
+                <img alt='spacer image' src='https://store.cloudflare.steamstatic.com/public/images/game/game_highlight_image_spacer.gif' />
+              </picture>
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
             </div>
             {/* large images of the carousel */}
             <div className="absolute top-0 right-0 bottom-0 left-0 text-center p-0 m-0 focus-within:">
               <div className="flex h-[100%] flex-col justify-center">
                 <a className="text-[#67c1f5]" onClick={() => {setImages(carouselInfo.huge_img_url[counter]);
                 setCurrentSlide(counter)}}>
+<<<<<<< HEAD
                   <img alt='largeImg' src={carouselInfo.large_img_url[counter]} />
+=======
+                  <picture>
+                    <img alt='large carousel image' src={carouselInfo.large_img_url[counter]} />
+                  </picture>
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
                 </a>
               </div>
             </div>
@@ -123,6 +138,7 @@ const CarouselImages = () => {
               </div>
               {/* small images below the main viewer of the carousel */}
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(0, 0)} >
+<<<<<<< HEAD
                 <img alt='smallImg' src={carouselInfo.small_img_url[0]}/>
               </div>
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(120, 1)}>
@@ -136,25 +152,41 @@ const CarouselImages = () => {
               </div>
               <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(480, 4)}>
                 <img alt='smallImg' src={carouselInfo.small_img_url[4]} />
+=======
+                <picture>
+                  <img alt='small carousel image' src={carouselInfo.small_img_url[0]}/>
+                </picture>
+              </div>
+              <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(120, 1)}>
+                <picture>
+                  <img alt='small carousel image' src={carouselInfo.small_img_url[1]} />
+                </picture>
+              </div>
+              <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(240, 2)}>
+                <picture>
+                  <img alt='small carousel image' src={carouselInfo.small_img_url[2]} />
+                </picture>
+              </div>
+              <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(360, 3)}>
+                <picture>
+                  <img alt='small carousel image' src={carouselInfo.small_img_url[3]} />
+                </picture>
+              </div>
+              <div className="h-[65px] w-[116px] cursor-pointer text-center m-[2px] bg-black relative float-left" onClick={()=> clicked(480, 4)}>
+                <picture>
+                  <img alt='small carousel image' src={carouselInfo.small_img_url[4]} />
+                </picture>
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
               </div>
             </div>
           </div>
           <div className="relative h-[18px]">
-
-            {/* Scroll bar under the carousel
-                fix the hover effects */}
-            
             {/* leftbutton */}
             <div className="group absolute w-[38px] top-0 bottom-0 rounded-[3px] block cursor-pointer bg-[#233c5166] hover:bg-[#417a9b]" onClick={()=> decrementLoc(frame, counter)}>
               <span className="h-[7px] w-[9px] ml-[13px] mt-[5px] inline-block bg-no-repeat bg-right-top group-hover:bg-right bg-0 bg-[url('https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png')]"></span>
             </div>
             {/* center bar with indicator  bar width = 522px bar-1/2indicator = 492px */}
             <input type='range' className={Styles.slider} min="1" max='100' defaultValue={1} onChange={moveScrollLoc} ></input>
-            {/* <div className="absolute left-[39px] right-[39px] top-0 bottom-0 bg-[#00000033] rounded-[3px]" onClick={(e) => moveScrollLoc(e)}> */}
-              {/* indicator */}
-              {/* <div className="absolute left-0 bg-[#233c5166] h-[18px] w-[60px] rounded-[3px] hover:bg-[#417a9b] cursor-pointer"></div> */}
-            {/* </div> */}
-
             {/* rightbutton */}
             <div className="group absolute w-[38px] top-0 bottom-0 rounded-[3px] cursor-pointer right-0 bg-[#233c5166] hover:bg-[#417a9b]" onClick={()=> incrementLoc(frame, counter)}>
               <span className='h-[7px] w-[9px] ml-[15px] mt-[5px] inline-block bg-no-repeat bg-top group-hover:bg-center bg-[url("https://store.cloudflare.steamstatic.com/public/images//v6/icon_cluster_controls.png")]'></span>
@@ -162,6 +194,7 @@ const CarouselImages = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
 {/*Modal*/}
 {images ? (
   <div>
@@ -211,10 +244,46 @@ const CarouselImages = () => {
                           </div>
                       </div>
                   </div>
+=======
+        {/*Modal*/}
+        {images ? (
+        <div>
+          <div className= {imageStyles.newModal_background} onClick={() => setImages(false)}></div>
+          <div className= {imageStyles.screenshot_popup_modal}>
+            <div className= {imageStyles.screenshot_popup_modal_content}>
+              <div className= {imageStyles.screenshot_popup_modal_title}>
+                <a className= {imageStyles.screenshot_a} href= "#">
+                  Download full-size version
+                  <picture>
+                    <img alt='small icon' className= {imageStyles.download} src="https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif"/> 
+                  </picture>
+                </a>
+              </div>
+              <div>
+                <picture>
+                  <img className={imageStyles.screenshot_img} alt='huge carousel image on click' src= {carouselInfo.huge_img_url[currentSlide]}/>
+                </picture>
+                <picture>
+                  <img className={imageStyles.screenshot_img2} alt='huge carousel image on click' src= {carouselInfo.huge_img_url[1]}/>
+                </picture>
+                <picture>
+                  <img className={imageStyles.screenshot_img2} alt='huge carousel image on click' src= {carouselInfo.huge_img_url[2]}/>
+                </picture>
+              </div>
+              <div className= {imageStyles.screenshot_popup_modal_footer}>
+                <div className= {imageStyles.screenshot_words}> {currentSlide + 1} of 5 screenshots</div>
+                <div className= {hidePrev()} onClick={() => setCurrentSlide((previousSlide) => previousSlide - 1)}>
+                  <span className= {imageStyles.btn_medium_span}>Prev</span>
+                </div>
+                <div className= {hideNext()} onClick={() => setCurrentSlide(currentSlide + 1)}>
+                  <span className= {imageStyles.btn_medium_span}>Next</span>
+                </div>
+>>>>>>> fb49c9f482c47d09562a74ca3c8ad3d4a961b066
               </div>
             </div>
-      ) : null}
-
+          </div>
+        </div>
+        ) : null}
       </div>
     )
   }
