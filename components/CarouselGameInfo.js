@@ -15,6 +15,7 @@ const CarouselGameInfo = () => {
         `${carouselInfo.title_img_url}`
 
   if(carouselInfo.tags){
+    
     return (
       <div className='w-[324px] ml-[0px] float-right'>
         <div className='p-[0px] font-sans'>
