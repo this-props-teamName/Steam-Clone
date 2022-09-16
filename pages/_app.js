@@ -8,13 +8,11 @@ import { UserProvider } from '@auth0/nextjs-auth0'
 function MyApp({ Component, pageProps }) {
   return (
     <UserProvider>
-      <>
         <RecoilRoot>
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </RecoilRoot>
-      </>
     </UserProvider>
   )
 }
