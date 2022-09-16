@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import detailsStyles from '../styles/RightColumn.module.css'
-import { carouselState } from './state'
+import { carouselState } from './State'
 import { useRecoilState } from 'recoil'
 
 const Details = () => {

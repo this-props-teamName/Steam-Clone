@@ -1,6 +1,6 @@
 import React from 'react'
 import ratingsStyles from '../styles/RightColumn.module.css'
-import { gamesState } from './state'
+import { gamesState } from './State'
 import { useRecoilState } from 'recoil'
 
 const Ratings = () => {

@@ -1,12 +1,10 @@
 import Header from "./Header"
 import Footer from "./Footer"
-import MainBody from './MainBody'
 import ModalStyles from '../styles/Modal.module.css'
-import { gamesState, carouselState, systemMinState, systemReqState, newsState } from "./state"
+import { gamesState, carouselState, systemMinState, systemReqState, newsState } from "./State"
 import { useRecoilState } from "recoil"
 import React, {useEffect} from 'react'; 
 import axios from 'axios'
-import Link from 'next/link'
 
 const Layout = ({children}) => {
 

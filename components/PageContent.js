@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import GameInfo from './GameInfo'
 import Title from './Title'
 import CarouselContainer from './CarouselContainer'

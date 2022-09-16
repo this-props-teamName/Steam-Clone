@@ -1,5 +1,5 @@
 import React from 'react'
-import { gamesState } from './state'
+import { gamesState } from './State'
 import { useRecoilState } from 'recoil'
 
 const GamePageAutoCollapseAbout = () => {

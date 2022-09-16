@@ -1,5 +1,3 @@
-import { data } from 'autoprefixer'
-import Link from 'next/link'
 import navStyles from '../styles/Nav.module.css'
 import { useState, useEffect } from 'react'
 

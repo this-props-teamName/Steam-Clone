@@ -1,4 +1,4 @@
-import { systemMinState, systemReqState } from './state';
+import { systemMinState, systemReqState } from './State';
 import { useRecoilState } from 'recoil'
 
 const GameSystemRequirements = () => {

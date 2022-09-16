@@ -1,7 +1,6 @@
 import React, {useState} from 'react'; 
-import { gamesState, carouselState } from './state';
+import { gamesState, carouselState } from './State';
 import { useRecoilState } from 'recoil'
-import GameInfo from './GameInfo';
 
 
 const GamePageAutoCollapseDeluxe = () => {

@@ -1,4 +1,4 @@
-import { carouselState } from './state'
+import { carouselState } from './State'
 import  { useRecoilState } from 'recoil'
 
 const Title = () => {

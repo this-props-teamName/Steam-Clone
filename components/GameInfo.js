@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import RightColumn from './RightColumn'
 import LeftColumn from './LeftColumn'
 

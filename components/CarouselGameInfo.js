@@ -1,4 +1,4 @@
-import { carouselState } from './state'
+import { carouselState } from './State'
 import  { useRecoilState } from 'recoil'
 import tagStyles from "../styles/Tags.module.css"
 import React, { useState } from "react"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import languageStyles from '../styles/SupportedLanguages.module.css'
 import languageGradient from '../styles/RightColumn.module.css'
 

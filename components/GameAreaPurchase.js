@@ -1,5 +1,5 @@
 import styles from '../styles/PurchaseGame.module.css'
-import { gamesState, carouselState } from "./state"
+import { gamesState, carouselState } from "./State"
 import { useRecoilState, useRecoilValue } from "recoil"
 
 export const GameAreaPurchase = () => {
